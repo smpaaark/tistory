@@ -19,6 +19,7 @@ Maven 기준으로 pom.xml에 아래 의존성 코드를 추가합니다.
 ```
 
 ## 결과
+JUnit4 테스트 코드
 ```
 @RunWith(SpringRunner.class)
 @SpringBootTest
@@ -47,3 +48,6 @@ public class MemberRepositoryTest {
     }
 }
 ```
+
+테스트 정상 작동    
+![1](https://raw.githubusercontent.com/smpark1020/tistory/master/Maven%20%26%20Gradle/%5BMaven%5D%20%EC%8A%A4%ED%94%84%EB%A7%81%20%EB%B6%80%ED%8A%B8%202.2.x%20%EC%9D%B4%EC%83%81%20%EB%B2%84%EC%A0%84%EC%97%90%EC%84%9C%20JUnit4%20%EC%82%AC%EC%9A%A9%ED%95%98%EA%B8%B0/1.PNG)
