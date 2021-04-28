@@ -6,3 +6,4 @@
 * Alt + Shift + 위/아래 화살표: 코드 이동
 * Alt + Enter: import
 * Ctrl + Alt + V: 리턴값을 받을 변수 자동 추가
+* Ctrl + /: 주석 처리/해제
