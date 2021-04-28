@@ -66,6 +66,7 @@ public class MemberRepositoryTest {
 또는
 ```
 @Repository
+@Transactional
 public class MemberRepository {
 
     @PersistenceContext
@@ -84,7 +85,7 @@ public class MemberRepository {
 ```
 
 ## 테스트 결과
-![1]()
+![1](https://raw.githubusercontent.com/smpark1020/tistory/master/JPA/EntityManager%EB%A5%BC%20%EC%82%AC%EC%9A%A9%ED%95%A0%EB%95%8C%EB%8A%94%20%EB%B0%98%EB%93%9C%EC%8B%9C%20%40Transactional%EC%9D%B4%20%EC%9E%88%EC%96%B4%EC%95%BC%20%ED%95%9C%EB%8B%A4/1.PNG)
 
 ## 결론
 JPA를 사용한다면 @Transactional을 잊지말자!!!!
