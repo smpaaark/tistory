@@ -8,7 +8,7 @@
 * H2 Database
 * Lombok
 * Validation   
-![1]()
+![1](https://raw.githubusercontent.com/smpark1020/tistory/master/Spring/%5BSpringBoot%5D%20%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8%20%EC%83%9D%EC%84%B1%20%EC%8B%9C%20%EC%B6%94%EA%B0%80%ED%95%B4%EC%95%BC%ED%95%98%EB%8A%94%20%EA%B8%B0%EB%8A%A5/1.PNG)
 
 ## pom.xml
 프로젝트를 import하면 아래와 같이 pom.xml에 의존성이 자동으로 추가됩니다.(저는 maven을 사용했습니다.)
