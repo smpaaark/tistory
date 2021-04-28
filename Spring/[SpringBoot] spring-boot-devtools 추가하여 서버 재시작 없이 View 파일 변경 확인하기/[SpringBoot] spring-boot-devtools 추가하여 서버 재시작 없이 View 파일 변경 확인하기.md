@@ -13,6 +13,7 @@
 
 ## 테스트
 1. 현재 화면   
+
 ![1](https://raw.githubusercontent.com/smpark1020/tistory/master/Spring/%5BSpringBoot%5D%20spring-boot-devtools%20%EC%B6%94%EA%B0%80%ED%95%98%EC%97%AC%20%EC%84%9C%EB%B2%84%20%EC%9E%AC%EC%8B%9C%EC%9E%91%20%EC%97%86%EC%9D%B4%20View%20%ED%8C%8C%EC%9D%BC%20%EB%B3%80%EA%B2%BD%20%ED%99%95%EC%9D%B8%ED%95%98%EA%B8%B0/1.PNG)
 
 2. html 파일 수정
@@ -23,9 +24,11 @@
 ```
 
 3. Build -> Recompile 'html파일명'
+
 ![2](https://raw.githubusercontent.com/smpark1020/tistory/master/Spring/%5BSpringBoot%5D%20spring-boot-devtools%20%EC%B6%94%EA%B0%80%ED%95%98%EC%97%AC%20%EC%84%9C%EB%B2%84%20%EC%9E%AC%EC%8B%9C%EC%9E%91%20%EC%97%86%EC%9D%B4%20View%20%ED%8C%8C%EC%9D%BC%20%EB%B3%80%EA%B2%BD%20%ED%99%95%EC%9D%B8%ED%95%98%EA%B8%B0/2.PNG)
 
 4. 브라우저 새로고침   
+
 ![3](https://raw.githubusercontent.com/smpark1020/tistory/master/Spring/%5BSpringBoot%5D%20spring-boot-devtools%20%EC%B6%94%EA%B0%80%ED%95%98%EC%97%AC%20%EC%84%9C%EB%B2%84%20%EC%9E%AC%EC%8B%9C%EC%9E%91%20%EC%97%86%EC%9D%B4%20View%20%ED%8C%8C%EC%9D%BC%20%EB%B3%80%EA%B2%BD%20%ED%99%95%EC%9D%B8%ED%95%98%EA%B8%B0/3.PNG)
 
 > 와우!
