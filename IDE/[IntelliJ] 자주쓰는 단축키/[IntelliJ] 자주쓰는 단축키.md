@@ -7,3 +7,6 @@
 * Alt + Enter: import
 * Ctrl + Alt + V: 리턴값을 받을 변수 자동 추가
 * Ctrl + /: 주석 처리/해제
+* Ctrl + Alt + P: 변수 파라미터로 빼기
+* Ctrl + Shfit + F9: 리컴파일
+* Ctrl + E: 최근에 사용한 파일 리스트
