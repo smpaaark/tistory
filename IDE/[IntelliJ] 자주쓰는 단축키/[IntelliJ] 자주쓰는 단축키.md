@@ -10,4 +10,5 @@
 * Ctrl + Alt + P: 변수 파라미터로 빼기
 * Ctrl + Shfit + F9: 리컴파일
 * Ctrl + E: 최근에 사용한 파일 리스트
-* Ctrl + Shift+ T: 해당 클래스의 테스트 클래스로 이동
+* Ctrl + Shift + T: 해당 클래스의 테스트 클래스로 이동
+* Ctrl + Alt + N: 인라인 변수로 리팩토링
