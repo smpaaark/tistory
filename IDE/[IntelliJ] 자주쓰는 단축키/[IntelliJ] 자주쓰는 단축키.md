@@ -13,3 +13,5 @@
 * Ctrl + Shift + T: 해당 클래스의 테스트 클래스로 이동
 * Ctrl + Alt + N: 인라인 변수로 리팩토링
 * Alt + insert: 코드 Generate
+* Ctrl + Y: 라인 삭제
+* Ctrl + Shift + F: 특정 문자열 검색
