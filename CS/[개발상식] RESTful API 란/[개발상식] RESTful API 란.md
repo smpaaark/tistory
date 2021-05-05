@@ -29,3 +29,6 @@ PUT또는 PATCH는 Update, 변경할 때 사용한다.
 DELETE는 Delete, 삭제할때 사용한다.   
 
 결국 REST API란, HTTP요청을 보낼때 어떤 URI에 어떤 메소드를 사용할지 개발자들 사이에 널리 지켜지는 약속이다.
+
+## 참고
+[REST API가 뭔가요?](https://youtu.be/iOueE9AXDQQ)
