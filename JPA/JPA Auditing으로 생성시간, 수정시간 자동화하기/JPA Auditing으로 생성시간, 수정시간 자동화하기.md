@@ -98,7 +98,10 @@ public void 차량매입_불러오기() throws Exception {
 ```
 
 ### 결과
-![1]()
+![1](https://raw.githubusercontent.com/smpark1020/tistory/master/JPA/JPA%20Auditing%EC%9C%BC%EB%A1%9C%20%EC%83%9D%EC%84%B1%EC%8B%9C%EA%B0%84%2C%20%EC%88%98%EC%A0%95%EC%8B%9C%EA%B0%84%20%EC%9E%90%EB%8F%99%ED%99%94%ED%95%98%EA%B8%B0/1.PNG)
 
 ## 테이블 확인
-![2]()
+![2](https://raw.githubusercontent.com/smpark1020/tistory/master/JPA/JPA%20Auditing%EC%9C%BC%EB%A1%9C%20%EC%83%9D%EC%84%B1%EC%8B%9C%EA%B0%84%2C%20%EC%88%98%EC%A0%95%EC%8B%9C%EA%B0%84%20%EC%9E%90%EB%8F%99%ED%99%94%ED%95%98%EA%B8%B0/2.PNG)
+
+## 참고
+* [스프링 부트와 AWS로 혼자 구현하는 웹 서비스](https://jojoldu.tistory.com/463)
