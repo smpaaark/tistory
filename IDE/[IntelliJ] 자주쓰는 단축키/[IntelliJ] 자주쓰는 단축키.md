@@ -15,3 +15,5 @@
 * Alt + insert: 코드 Generate
 * Ctrl + Y: 라인 삭제
 * Ctrl + Shift + F: 특정 문자열 검색
+* Ctrl + Shift + F10: main 메서드 실행
+* Shift + F6: Rename
