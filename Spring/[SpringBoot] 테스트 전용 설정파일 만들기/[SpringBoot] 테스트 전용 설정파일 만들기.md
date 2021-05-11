@@ -5,4 +5,4 @@
 * src/test/resources/application.properties: 테스트 코드 실행 시 읽는 설정 파일
 
 ## 디렉토리 구조
-![1]()
+![1](https://raw.githubusercontent.com/smpark1020/tistory/master/Spring/%5BSpringBoot%5D%20%ED%85%8C%EC%8A%A4%ED%8A%B8%20%EC%A0%84%EC%9A%A9%20%EC%84%A4%EC%A0%95%ED%8C%8C%EC%9D%BC%20%EB%A7%8C%EB%93%A4%EA%B8%B0/1.PNG)
