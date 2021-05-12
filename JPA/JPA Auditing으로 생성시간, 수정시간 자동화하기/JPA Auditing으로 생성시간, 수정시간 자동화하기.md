@@ -28,10 +28,10 @@ public abstract class BaseTimeEntity {
 
 }
 ```
-* @MappedSuperclass: Entitiy들이 해당 클래스를 상속할 경우 정의된 필드도 컬럼으로 인식되도록 한다.
-* @EntityListeners(AuditingEntityListener.class): BaseTimeEntity 클래스에 Auditing 기능을 포함시킨다.
-* @CreatedDate: Enitity가 생성되어 저장될 때 시간이 자동 저장된다.
-* @LastModifiedDate: 조회한 Entity의 값을 변경할 때 시간이 자동 저장된다.
+* \@MappedSuperclass: Entitiy들이 해당 클래스를 상속할 경우 정의된 필드도 컬럼으로 인식되도록 한다.
+* \@EntityListeners(AuditingEntityListener.class): BaseTimeEntity 클래스에 Auditing 기능을 포함시킨다.
+* \@CreatedDate: Enitity가 생성되어 저장될 때 시간이 자동 저장된다.
+* \@LastModifiedDate: 조회한 Entity의 값을 변경할 때 시간이 자동 저장된다.
 
 ## Entity 클래스는 BaseTimeEntity를 상속받아야 한다.
 ```

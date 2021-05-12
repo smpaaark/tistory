@@ -1,4 +1,4 @@
-스프링의 @Valid를 사용하면 유효성 검증에 실패한 내용이 Errors에 담긴다.   
+스프링의 \@Valid를 사용하면 유효성 검증에 실패한 내용이 Errors에 담긴다.   
 ```
 @PostMapping("api/car")
 public ResponseEntity<?> saveCar(@RequestBody @Valid CarSaveRequestDto requestDto, Errors errors) {
@@ -28,7 +28,7 @@ Errors 객체는 JSON으로 바로 변환할 수 없기 때문에 에러가 발�
 그 이유는 Errors 객체는 자바 빈 스펙을 준수하고 있는 객체가 아니기 때문이다.   
 
 따라서 JsonSerializer\<Errors>를 상속받는 별도의 클래스를 만들고 serialize 메서드를 Override 해야한다.   
-이때 @JsonComponent를 꼭 붙여줘야 한다.   
+이때 \@JsonComponent를 꼭 붙여줘야 한다.   
 ### 코드
 ```
 @JsonComponent
