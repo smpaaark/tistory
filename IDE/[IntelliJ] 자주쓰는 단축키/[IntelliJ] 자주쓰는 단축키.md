@@ -17,3 +17,5 @@
 * Ctrl + Shift + F: 특정 문자열 검색
 * Ctrl + Shift + F10: main 메서드 실행
 * Shift + F6: Rename
+* Ctrl + Shift + F10: 현재 메서드 실행
+* Shift + F10: 마지막으로 실행된 메서드 실행
