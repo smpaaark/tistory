@@ -22,7 +22,16 @@
 ```
 
 ## ddl-auto 옵션 종류
-* create: 기존의 테이블이 있다면 지우고 새로 만든다.
-* create-drop: 테이블을 새로 만들고 앱이 종료될 때 지운다.
-* update: 변경된 스키마를 적용한다.
-* validate: 변경된 스키마가 있는지 확인만 하고 만약 변경이 있다면 오류가 발생한다.
+* create: 기존테이블 삭제 후 다시 생성 (DROP + CREATE)
+* create-drop: create와 같으나 종료시점에 테이블 DROP
+* update: 변경분만 반영```(운영DB에서는 사용하면 안됨)```
+* validate: 엔티티와 테이블이 정상 매핑되었는지만 확인
+* none: 사용하지 않음(사실상 없는 값이지만 관례상 none이라고 한다.)
+
+## 주의할 점
+* 운영 장비에서는 절대 crate, create-drop, update 사용하면 안된다.
+* 개발 초기 단계는 create 또는 update
+* 테스트 서버는 update 또는 validate
+* 스테이징과 운영 서버는 validate 또는 none
+
+하지만 로컬 환경을 제외한 나머지 서버에서는 최대한 직접 쿼리를 날려서 적용하는 것이 가장 좋다.
