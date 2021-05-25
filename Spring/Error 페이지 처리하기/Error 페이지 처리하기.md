@@ -53,4 +53,4 @@ public class IndexController extends ErrorController {
 
 
 ## 결과
-![1]()
+![1](https://raw.githubusercontent.com/smpark1020/tistory/master/Spring/Error%20%ED%8E%98%EC%9D%B4%EC%A7%80%20%EC%B2%98%EB%A6%AC%ED%95%98%EA%B8%B0/1.PNG)
