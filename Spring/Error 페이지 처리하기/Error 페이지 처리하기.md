@@ -29,20 +29,6 @@ public class ErrorController {
 }
 ```
 
-## Error.mustache
-```
-{{>layout/header}}
-
-<body>
-<div class="container">
-    {{>layout/bodyHeader}}
-
-    <p>{{message}}</p>
-    <p>[홈으로] 버튼을 눌러 홈으로 돌아가주세요.</p>
-
-{{>layout/footer}}
-```
-
 ## IndexController
 ```
 @Controller
