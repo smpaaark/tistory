@@ -133,8 +133,8 @@ public void QueryDsl_테스트() throws Exception {
         car0_.car_number=?
 ```
 
-테스트 결과
-![1]()
+테스트 결과   
+![1](https://raw.githubusercontent.com/smpark1020/tistory/master/JPA/SpringBoot%2C%20SpringDataJpa%2C%20Maven%20%ED%99%98%EA%B2%BD%EC%97%90%20QueryDsl%20%EC%A0%81%EC%9A%A9%ED%95%98%EA%B8%B0/1.PNG)
 
 ## 참고
 * [이동욱님 블로그, Spring Boot Data Jpa 프로젝트에 Querydsl 적용하기](https://jojoldu.tistory.com/372)
