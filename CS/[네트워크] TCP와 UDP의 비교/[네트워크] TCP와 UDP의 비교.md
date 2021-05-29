@@ -18,16 +18,16 @@ End Point간 ```신뢰성```있는 데이터 ```전송```을 담당하는 계층
 * Error Detection(오류 감지)
 
 ### TCP의 데이터 전송 방식
-### 1. Client가 패킷 송신
-### 2. Server에서 ACK 송신
-### 3. ACK를 수신하지 못하면 재전송
+1. Client가 패킷 송신
+2. Server에서 ACK 송신
+3. ACK를 수신하지 못하면 재전송
 
 ### 4 way-handshake (Connection close)
-### 1. 데이터를 전부 송신한 Client가 FIN 송신
-### 2. Server가 ACK 송신
-### 3. Server에서 남은 패킷 송신 (일정 시간 대기)
-### 4. Server가 FIN 송신
-### 5. Client가 ACK 송신
+1. 데이터를 전부 송신한 Client가 FIN 송신
+2. Server가 ACK 송신
+3. Server에서 남은 패킷 송신 (일정 시간 대기)
+4. Server가 FIN 송신
+5. Client가 ACK 송신
 
 ### TCP의 문제점
 * 매번 Connection을 연결해서 시간 손실 발생
@@ -41,8 +41,8 @@ End Point간 ```신뢰성```있는 데이터 ```전송```을 담당하는 계층
 * 비교적 데이터의 신뢰성이 중요하지 않을 때 사용 (ex. 영상 스트리밍)
 
 ### UDP의 데이터 전송 방식
-### 1. Client가 패킷 송신
-### 2. 끝
+1. Client가 패킷 송신
+2. 끝
 
 ## 참고
 * [[10분 테코톡] 👨‍🏫르윈의 TCP UDP](https://youtu.be/ikDVGYp5dhg)
