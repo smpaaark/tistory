@@ -9,7 +9,7 @@
 7. 알아낸 www.smpark.com의 IP로 접속한다.
 
 ### 그림 참고
-![1]()
+![1](https://raw.githubusercontent.com/smpark1020/tistory/master/CS/%5B%EB%84%A4%ED%8A%B8%EC%9B%8C%ED%81%AC%5D%20DNS%20Round%20Robin%20%EB%B0%A9%EC%8B%9D/1.PNG)
 
 ## 라운드 로빈(Round Robin) 방식의 DNS 서버
 여러 대의 웹 서버를 운영해서 웹 클라이언트가 서비스를 요청할 경우에 교대로 서비스를 실시하도록 하는 방식   
@@ -18,7 +18,7 @@
 또한 혹시라도 1대의 웹서버가 죽더라도 약간 느려지긴 하겠지만 서비스는 이상없이 진행된다.   
 
 ### 그림 참고
-![2]()
+![2](https://raw.githubusercontent.com/smpark1020/tistory/master/CS/%5B%EB%84%A4%ED%8A%B8%EC%9B%8C%ED%81%AC%5D%20DNS%20Round%20Robin%20%EB%B0%A9%EC%8B%9D/2.PNG)
 
 ## 참고
 * [[이것이 Windows Server다] 10장 03교시 : DNS 서버 역할, 라운드 로빈 방식](https://youtu.be/7eV9T_NkCz0)
