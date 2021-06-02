@@ -8,12 +8,6 @@ Maven 기준으로 pom.xml에 아래 의존성 코드를 추가합니다.
 <dependency>
     <groupId>org.junit.vintage</groupId>
     <artifactId>junit-vintage-engine</artifactId>
-    <exclusions>
-        <exclusion>
-            <groupId>org.hamcrest</groupId>
-            <artifactId>hamcrest-core</artifactId>
-        </exclusion>
-    </exclusions>
     <scope>test</scope>
 </dependency>
 ```
