@@ -1,6 +1,6 @@
 ## 레이아웃 추가
 mustache 디렉토리 구조   
-![1]()
+![1](https://raw.githubusercontent.com/smpark1020/tistory/master/View%20%26%20JavaScript/%5BMustache%5D%20%EA%B8%B0%EB%B3%B8%20%EB%AC%B8%EB%B2%95/1.PNG)
 
 index.mustache
 ```
