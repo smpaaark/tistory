@@ -1,5 +1,5 @@
 ### src/main/resources/ 디렉토리에 application-oauth.properties 파일을 생성한다.
-![1]()
+![1](https://raw.githubusercontent.com/smpark1020/tistory/master/Spring/%5BSpringSecurity%5D%20%EA%B5%AC%EA%B8%80%20%EB%A1%9C%EA%B7%B8%EC%9D%B8%20%EC%97%B0%EB%8F%99%ED%95%98%EA%B8%B0%202%20-%20application-oauth%20%EB%93%B1%EB%A1%9D/1.PNG)
 
 ### 해당 파일에 클라이언트 ID(clientId)와 클라이언트 보안 비밀(clientSecret) 코드를 다음과 같이 등록한다.
 ```
