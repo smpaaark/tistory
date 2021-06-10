@@ -1,4 +1,4 @@
-김영한님의 [자바 ORM 표준 JPA 프로그래밍-기본편]() 강의를 들으며 실습하는 중   
+김영한님의 [자바 ORM 표준 JPA 프로그래밍-기본편](https://inf.run/4hCd) 강의를 들으며 실습하는 중   
 ddl-auto 옵션이 create인 상태에서 main을 실행했는데 테이블 drop할때 에러가 발생했다.
 
 ## 에러 내용
@@ -15,7 +15,7 @@ Caused by: org.h2.jdbc.JdbcSQLSyntaxErrorException: Cannot drop "ITEM" because "
 ## 원인
 현재 사용중인 H2의 버전이 1.4.200인데 해당 버전은 Hibernate 5.4.13.Final 부터 정상 호환된다고 한다.   
 역시나 현재 Hibernate의 버전이 5.3.10 Final 버전이었다.   
-![1]()
+![1](https://raw.githubusercontent.com/smpark1020/tistory/master/JPA/ddl-auto%EA%B0%80%20create%EC%9D%B8%EB%8D%B0%20%ED%85%8C%EC%9D%B4%EB%B8%94%20drop%EC%8B%9C%20%EC%97%90%EB%9F%AC%20%EB%B0%9C%EC%83%9D/1.PNG)
 
 ## 해결
 ### pom.xml에 hibernate 버전 수정
@@ -26,7 +26,7 @@ Caused by: org.h2.jdbc.JdbcSQLSyntaxErrorException: Cannot drop "ITEM" because "
     <version>5.4.13.Final</version>
 </dependency>
 ```
-![2]()
+![2](https://raw.githubusercontent.com/smpark1020/tistory/master/JPA/ddl-auto%EA%B0%80%20create%EC%9D%B8%EB%8D%B0%20%ED%85%8C%EC%9D%B4%EB%B8%94%20drop%EC%8B%9C%20%EC%97%90%EB%9F%AC%20%EB%B0%9C%EC%83%9D/2.PNG)
 
 ### 테스트 코드
 ```

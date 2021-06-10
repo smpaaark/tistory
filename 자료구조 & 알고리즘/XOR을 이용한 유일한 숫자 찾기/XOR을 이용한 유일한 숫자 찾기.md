@@ -28,7 +28,7 @@ public int singleNumber(int[] nums) {
 ```
 
 ## 결과
-![1]()
+![1](https://raw.githubusercontent.com/smpark1020/tistory/master/%EC%9E%90%EB%A3%8C%EA%B5%AC%EC%A1%B0%20%26%20%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98/XOR%EC%9D%84%20%EC%9D%B4%EC%9A%A9%ED%95%9C%20%EC%9C%A0%EC%9D%BC%ED%95%9C%20%EC%88%AB%EC%9E%90%20%EC%B0%BE%EA%B8%B0/1.PNG)
 
 ## 참고
 * [136. Single Number](https://leetcode.com/problems/single-number/)
