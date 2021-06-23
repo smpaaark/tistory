@@ -50,7 +50,9 @@
 ![16](https://raw.githubusercontent.com/smpark1020/tistory/master/Spring/%5BSpringSecurity%5D%20%EA%B5%AC%EA%B8%80%20%EB%A1%9C%EA%B7%B8%EC%9D%B8%20%EC%97%B0%EB%8F%99%ED%95%98%EA%B8%B0%201%20-%20%EA%B5%AC%EA%B8%80%20%EC%84%9C%EB%B9%84%EC%8A%A4%20%EB%93%B1%EB%A1%9D/16.PNG)
 
 ### [승인된 리디렉션 URI] 항목만 그림과 같이 값을 등록한다.
-![17](https://raw.githubusercontent.com/smpark1020/tistory/master/Spring/%5BSpringSecurity%5D%20%EA%B5%AC%EA%B8%80%20%EB%A1%9C%EA%B7%B8%EC%9D%B8%20%EC%97%B0%EB%8F%99%ED%95%98%EA%B8%B0%201%20-%20%EA%B5%AC%EA%B8%80%20%EC%84%9C%EB%B9%84%EC%8A%A4%20%EB%93%B1%EB%A1%9D/17.PNG)
+![17](https://raw.githubusercontent.com/smpark1020/tistory/master/Spring/%5BSpringSecurity%5D%20%EA%B5%AC%EA%B8%80%20%EB%A1%9C%EA%B7%B8%EC%9D%B8%20%EC%97%B0%EB%8F%99%ED%95%98%EA%B8%B0%201%20-%20%EA%B5%AC%EA%B8%80%20%EC%84%9C%EB%B9%84%EC%8A%A4%20%EB%93%B1%EB%A1%9D/17.PNG)   
+(url에 https => http로 변경해줘야 합니다.)   
+
 승인된 리디렉션 URI
 * 서비스에서 파라미터로 인증 정보를 주었을 때 인증이 성공하면 구글에서 리다이렉트할 URL이다.
 * 스프링 부트 2 버전의 시큐리티에서는 기본적으로 {도메인}/login/oauth2/code/{소셜서비스코드}로 리다이렉트 URL을 지원하고 있다.
