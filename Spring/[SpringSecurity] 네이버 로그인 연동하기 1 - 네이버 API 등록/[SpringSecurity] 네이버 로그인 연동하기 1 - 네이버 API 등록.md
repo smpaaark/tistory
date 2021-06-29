@@ -1,13 +1,13 @@
 먼저 [네이버 오픈 API](https://developers.naver.com/apps/#/register?api-nvlogin)로 이동합니다.   
 
 다음과 같이 각 항목을 채웁니다.    
-![1]()  
+![1](https://raw.githubusercontent.com/smpark1020/tistory/master/Spring/%5BSpringSecurity%5D%20%EB%84%A4%EC%9D%B4%EB%B2%84%20%EB%A1%9C%EA%B7%B8%EC%9D%B8%20%EC%97%B0%EB%8F%99%ED%95%98%EA%B8%B0%201%20-%20%EB%84%A4%EC%9D%B4%EB%B2%84%20API%20%EB%93%B1%EB%A1%9D/1.PNG)  
 
 URL을 등록합니다.     
-![2]()
+![2](https://raw.githubusercontent.com/smpark1020/tistory/master/Spring/%5BSpringSecurity%5D%20%EB%84%A4%EC%9D%B4%EB%B2%84%20%EB%A1%9C%EA%B7%B8%EC%9D%B8%20%EC%97%B0%EB%8F%99%ED%95%98%EA%B8%B0%201%20-%20%EB%84%A4%EC%9D%B4%EB%B2%84%20API%20%EB%93%B1%EB%A1%9D/2.PNG)
 
 ClientID와 ClientSecret이 생성됩니다.   
-![3]() 
+![3](https://raw.githubusercontent.com/smpark1020/tistory/master/Spring/%5BSpringSecurity%5D%20%EB%84%A4%EC%9D%B4%EB%B2%84%20%EB%A1%9C%EA%B7%B8%EC%9D%B8%20%EC%97%B0%EB%8F%99%ED%95%98%EA%B8%B0%201%20-%20%EB%84%A4%EC%9D%B4%EB%B2%84%20API%20%EB%93%B1%EB%A1%9D/3.PNG) 
 
 해당 키값들을 application-oauth.properties에 등록합니다.   
 네이버에서는 스프링 시큐리티를 공식 지원하지 않기 때문에 그동안 Common-OAuth2Provier에서 해주던 값들도 전부 수동으로 입력해야 합니다.
