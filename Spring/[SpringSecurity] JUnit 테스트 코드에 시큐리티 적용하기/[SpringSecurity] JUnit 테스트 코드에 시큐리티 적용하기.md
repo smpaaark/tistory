@@ -55,7 +55,7 @@ public void 차량_매입하기() throws Exception {
     ...
 }
 ```
-@WithMockUser(roles = "USER")
+\@WithMockUser(roles = "USER")
 * 인증된 모의(가짜) 사용자를 만들어서 사용합니다.
 * roles에 권한을 추가할 수 있습니다.
 * 즉, 이 어노테이션으로 인해 ROLE_USER 권한을 가진 사용자가 API를 요청하는 것과 동일한 효과를 가지게 됩니다.
@@ -72,7 +72,7 @@ public class CarApiControllerTest {
 ```
 
 ## Maven Test 실행 결과
-![1]()
+![1](https://raw.githubusercontent.com/smpark1020/tistory/master/Spring/%5BSpringSecurity%5D%20JUnit%20%ED%85%8C%EC%8A%A4%ED%8A%B8%20%EC%BD%94%EB%93%9C%EC%97%90%20%EC%8B%9C%ED%81%90%EB%A6%AC%ED%8B%B0%20%EC%A0%81%EC%9A%A9%ED%95%98%EA%B8%B0/1.PNG)
 
 ## 참고
 * [이동욱님의 스프링 부트와 AWS로 혼자 구현하는 웹 서비스](https://jojoldu.tistory.com/463)
