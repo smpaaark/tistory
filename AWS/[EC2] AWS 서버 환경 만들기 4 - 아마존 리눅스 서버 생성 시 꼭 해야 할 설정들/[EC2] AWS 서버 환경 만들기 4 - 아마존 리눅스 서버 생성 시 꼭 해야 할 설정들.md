@@ -23,14 +23,14 @@ sudo yum install -y java-1.8.0-openjdk-devel.x86_64
 ```
 sudo /usr/sbin/alternatives --config java
 ```
-![1]()   
+![1](https://raw.githubusercontent.com/smpark1020/tistory/master/AWS/%5BEC2%5D%20AWS%20%EC%84%9C%EB%B2%84%20%ED%99%98%EA%B2%BD%20%EB%A7%8C%EB%93%A4%EA%B8%B0%204%20-%20%EC%95%84%EB%A7%88%EC%A1%B4%20%EB%A6%AC%EB%88%85%EC%8A%A4%20%EC%84%9C%EB%B2%84%20%EC%83%9D%EC%84%B1%20%EC%8B%9C%20%EA%BC%AD%20%ED%95%B4%EC%95%BC%20%ED%95%A0%20%EC%84%A4%EC%A0%95%EB%93%A4/1.PNG)   
 
 현재 Java 8만 설치되어 있으니 따로 작업할 필요가 없습니다.   
 현재 버전이 Java8이 되었는지 확인합니다.
 ```
 java -version
 ```
-![2]()   
+![2](https://raw.githubusercontent.com/smpark1020/tistory/master/AWS/%5BEC2%5D%20AWS%20%EC%84%9C%EB%B2%84%20%ED%99%98%EA%B2%BD%20%EB%A7%8C%EB%93%A4%EA%B8%B0%204%20-%20%EC%95%84%EB%A7%88%EC%A1%B4%20%EB%A6%AC%EB%88%85%EC%8A%A4%20%EC%84%9C%EB%B2%84%20%EC%83%9D%EC%84%B1%20%EC%8B%9C%20%EA%BC%AD%20%ED%95%B4%EC%95%BC%20%ED%95%A0%20%EC%84%A4%EC%A0%95%EB%93%A4/2.PNG)   
 
 ## 타임존 변경
 EC2 서버의 기본 타임존은 UTC입니다.   
@@ -46,11 +46,11 @@ sudo ln -s /usr/share/zoneinfo/Asia/Seoul /etc/localtime
 ```
 
 정상적으로 수행되었다면 date 명령어로 타임존이 KST로 변경된 것을 확인할 수 있습니다.   
-![3]()   
+![3](https://raw.githubusercontent.com/smpark1020/tistory/master/AWS/%5BEC2%5D%20AWS%20%EC%84%9C%EB%B2%84%20%ED%99%98%EA%B2%BD%20%EB%A7%8C%EB%93%A4%EA%B8%B0%204%20-%20%EC%95%84%EB%A7%88%EC%A1%B4%20%EB%A6%AC%EB%88%85%EC%8A%A4%20%EC%84%9C%EB%B2%84%20%EC%83%9D%EC%84%B1%20%EC%8B%9C%20%EA%BC%AD%20%ED%95%B4%EC%95%BC%20%ED%95%A0%20%EC%84%A4%EC%A0%95%EB%93%A4/3.PNG)   
 
 ## Hostname 변경
 여러 서버를 관리 중일 경우 IP만으로 어떤 서비스의 서버인지 확인이 어렵습니다.   
-![4]()
+![4](https://raw.githubusercontent.com/smpark1020/tistory/master/AWS/%5BEC2%5D%20AWS%20%EC%84%9C%EB%B2%84%20%ED%99%98%EA%B2%BD%20%EB%A7%8C%EB%93%A4%EA%B8%B0%204%20-%20%EC%95%84%EB%A7%88%EC%A1%B4%20%EB%A6%AC%EB%88%85%EC%8A%A4%20%EC%84%9C%EB%B2%84%20%EC%83%9D%EC%84%B1%20%EC%8B%9C%20%EA%BC%AD%20%ED%95%B4%EC%95%BC%20%ED%95%A0%20%EC%84%A4%EC%A0%95%EB%93%A4/4.PNG)
 > ip-172-31-6-231이 무슨 서비스인지 알 수 없습니다.
 
 그래서 각 서버가 어느 서비스인지 표현하기 위해 HOSTNAME을 변경하겠습니다.  
@@ -87,7 +87,7 @@ sudo vim /etc/hosts
 * 인스턴스에 로그인하고 호스트 이름이 업데이트되었는지 확인합니다.    
 프롬프트에 새 호스트 이름이 첫 번째 "."까지 표시되어야 하고, hostname 명령이 정규화된 도메인 이름을 표시해야 합니다.      
 
-![7]()
+![7](https://raw.githubusercontent.com/smpark1020/tistory/master/AWS/%5BEC2%5D%20AWS%20%EC%84%9C%EB%B2%84%20%ED%99%98%EA%B2%BD%20%EB%A7%8C%EB%93%A4%EA%B8%B0%204%20-%20%EC%95%84%EB%A7%88%EC%A1%B4%20%EB%A6%AC%EB%88%85%EC%8A%A4%20%EC%84%9C%EB%B2%84%20%EC%83%9D%EC%84%B1%20%EC%8B%9C%20%EA%BC%AD%20%ED%95%B4%EC%95%BC%20%ED%95%A0%20%EC%84%A4%EC%A0%95%EB%93%A4/7.PNG)
 
 정상적으로 등록되었는지 확인해 봅니다.   
 확인 방법은 다음 명령어로 합니다.   
@@ -96,7 +96,7 @@ curl 등록한 호스트 이름
 ```
 
 잘 등록하였다면 다음과 같이 80 포트로 접근이 안 된다는 에러가 발생합니다.   
-![8]()   
+![8](https://raw.githubusercontent.com/smpark1020/tistory/master/AWS/%5BEC2%5D%20AWS%20%EC%84%9C%EB%B2%84%20%ED%99%98%EA%B2%BD%20%EB%A7%8C%EB%93%A4%EA%B8%B0%204%20-%20%EC%95%84%EB%A7%88%EC%A1%B4%20%EB%A6%AC%EB%88%85%EC%8A%A4%20%EC%84%9C%EB%B2%84%20%EC%83%9D%EC%84%B1%20%EC%8B%9C%20%EA%BC%AD%20%ED%95%B4%EC%95%BC%20%ED%95%A0%20%EC%84%A4%EC%A0%95%EB%93%A4/8.PNG)   
 
 이는 아직 80포트로 실행된 서비스가 없음을 의미합니다.   
 즉, curl 호스트 이름으로 실행은 잘 되었음을 의미합니다.   
