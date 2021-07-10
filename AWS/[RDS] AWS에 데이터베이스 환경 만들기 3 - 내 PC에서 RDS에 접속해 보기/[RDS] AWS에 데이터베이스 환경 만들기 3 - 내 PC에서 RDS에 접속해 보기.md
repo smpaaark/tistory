@@ -1,14 +1,14 @@
 로컬 PC에서 RDS로 접근하기 위해서 RDS의 보안 그룹에 본인 PC의 IP를 추가하겠습니다.   
 RDS의 세부정보 페이지에서 [보안 그룹] 항목을 클릭합니다.   
-![1]()   
+![1](https://raw.githubusercontent.com/smpark1020/tistory/master/AWS/%5BRDS%5D%20AWS%EC%97%90%20%EB%8D%B0%EC%9D%B4%ED%84%B0%EB%B2%A0%EC%9D%B4%EC%8A%A4%20%ED%99%98%EA%B2%BD%20%EB%A7%8C%EB%93%A4%EA%B8%B0%203%20-%20%EB%82%B4%20PC%EC%97%90%EC%84%9C%20RDS%EC%97%90%20%EC%A0%91%EC%86%8D%ED%95%B4%20%EB%B3%B4%EA%B8%B0/1.PNG)   
 > rds-launch-wizard라는 새로운 보안 그룹을 생성했습니다.
 
 RDS의 보안 그룹 정보를 그대로 두고, 브라우저를 새로 열어 봅니다.   
 그래서 브라우저 다른 창에서는 보안 그룹 목록 중 EC2에 사용된 보안 그룹의 그룹 ID를 복사합니다.   
-![2]()   
+![2](https://raw.githubusercontent.com/smpark1020/tistory/master/AWS/%5BRDS%5D%20AWS%EC%97%90%20%EB%8D%B0%EC%9D%B4%ED%84%B0%EB%B2%A0%EC%9D%B4%EC%8A%A4%20%ED%99%98%EA%B2%BD%20%EB%A7%8C%EB%93%A4%EA%B8%B0%203%20-%20%EB%82%B4%20PC%EC%97%90%EC%84%9C%20RDS%EC%97%90%20%EC%A0%91%EC%86%8D%ED%95%B4%20%EB%B3%B4%EA%B8%B0/2.PNG)   
 
 복사된 보안 그룹 ID와 보인의 IP를 RDS 보안 그룹의 인바운드로 추가합니다.   
-![3]()   
+![3](https://raw.githubusercontent.com/smpark1020/tistory/master/AWS/%5BRDS%5D%20AWS%EC%97%90%20%EB%8D%B0%EC%9D%B4%ED%84%B0%EB%B2%A0%EC%9D%B4%EC%8A%A4%20%ED%99%98%EA%B2%BD%20%EB%A7%8C%EB%93%A4%EA%B8%B0%203%20-%20%EB%82%B4%20PC%EC%97%90%EC%84%9C%20RDS%EC%97%90%20%EC%A0%91%EC%86%8D%ED%95%B4%20%EB%B3%B4%EA%B8%B0/3.PNG)   
 
 인바운드 규칙 유형에서는 MYSQL/Aurora를 선택하시면 자동으로 3306포트가 선택됩니다.   
 * 보안 그룹 첫 번째 줄: 현재 내 PC의 IP를 등록합니다.
@@ -18,10 +18,10 @@ RDS의 보안 그룹 정보를 그대로 두고, 브라우저를 새로 열어 �
 
 ## Workbench 접속
 본인이 생성한 RDS의 정보를 차례로 등록합니다.   
-![9]()   
+![9](https://raw.githubusercontent.com/smpark1020/tistory/master/AWS/%5BRDS%5D%20AWS%EC%97%90%20%EB%8D%B0%EC%9D%B4%ED%84%B0%EB%B2%A0%EC%9D%B4%EC%8A%A4%20%ED%99%98%EA%B2%BD%20%EB%A7%8C%EB%93%A4%EA%B8%B0%203%20-%20%EB%82%B4%20PC%EC%97%90%EC%84%9C%20RDS%EC%97%90%20%EC%A0%91%EC%86%8D%ED%95%B4%20%EB%B3%B4%EA%B8%B0/9.PNG)   
 
 마스터 계정명과 비밀번호를 등록한 뒤, 화면 아래의 [Test Connection]을 클릭해 연결 테스트를 해봅니다.   
-![10]()   
+![10](https://raw.githubusercontent.com/smpark1020/tistory/master/AWS/%5BRDS%5D%20AWS%EC%97%90%20%EB%8D%B0%EC%9D%B4%ED%84%B0%EB%B2%A0%EC%9D%B4%EC%8A%A4%20%ED%99%98%EA%B2%BD%20%EB%A7%8C%EB%93%A4%EA%B8%B0%203%20-%20%EB%82%B4%20PC%EC%97%90%EC%84%9C%20RDS%EC%97%90%20%EC%A0%91%EC%86%8D%ED%95%B4%20%EB%B3%B4%EA%B8%B0/10.PNG)   
 
 Successful 메시지를 보았다면 [Ok] 버튼을 눌러 최종 저장을 합니다.   
 
@@ -32,7 +32,7 @@ use {AWS RDS 웹콘솔에서 지정한 데이터베이스명};
 ```
 
 만약 본인이 RDS 생성 시 지정한 Database 명을 잊었다면 왼쪽의 schema 항목을 보면 MySQL에서 기본으로 생성하는 싀마 외에 다른 스키마가 1개 추가되어 있으니 이를 확인하면 됩니다.   
-![11]()   
+![11](https://raw.githubusercontent.com/smpark1020/tistory/master/AWS/%5BRDS%5D%20AWS%EC%97%90%20%EB%8D%B0%EC%9D%B4%ED%84%B0%EB%B2%A0%EC%9D%B4%EC%8A%A4%20%ED%99%98%EA%B2%BD%20%EB%A7%8C%EB%93%A4%EA%B8%B0%203%20-%20%EB%82%B4%20PC%EC%97%90%EC%84%9C%20RDS%EC%97%90%20%EC%A0%91%EC%86%8D%ED%95%B4%20%EB%B3%B4%EA%B8%B0/11.PNG)   
 
 쿼리는 다음과 같이 실행합니다.   
 쿼리문을 드래그로 선택한 뒤 [Ctrl + Shift + Enter]를 하면 됩니다.   
@@ -41,7 +41,7 @@ use used_car_admin;
 ```
 
 다음 그림과 같이 화면 아래에 성공 표시가 떴다면 쿼리가 정상적으로 수행된 것입니다.   
-![12]()   
+![12](https://raw.githubusercontent.com/smpark1020/tistory/master/AWS/%5BRDS%5D%20AWS%EC%97%90%20%EB%8D%B0%EC%9D%B4%ED%84%B0%EB%B2%A0%EC%9D%B4%EC%8A%A4%20%ED%99%98%EA%B2%BD%20%EB%A7%8C%EB%93%A4%EA%B8%B0%203%20-%20%EB%82%B4%20PC%EC%97%90%EC%84%9C%20RDS%EC%97%90%20%EC%A0%91%EC%86%8D%ED%95%B4%20%EB%B3%B4%EA%B8%B0/12.PNG)   
 
 데이터베이스가 선택된 상태에서 현재의 character_set, collation 설정을 확인합니다.   
 ```
@@ -60,14 +60,14 @@ COLLATE = 'utf8mb4_general_ci';
 ```
 
 쿼리를 수행하였다면 다시 한번 character set을 확인해 봅니다.   
-![13]()   
+![13](https://raw.githubusercontent.com/smpark1020/tistory/master/AWS/%5BRDS%5D%20AWS%EC%97%90%20%EB%8D%B0%EC%9D%B4%ED%84%B0%EB%B2%A0%EC%9D%B4%EC%8A%A4%20%ED%99%98%EA%B2%BD%20%EB%A7%8C%EB%93%A4%EA%B8%B0%203%20-%20%EB%82%B4%20PC%EC%97%90%EC%84%9C%20RDS%EC%97%90%20%EC%A0%91%EC%86%8D%ED%95%B4%20%EB%B3%B4%EA%B8%B0/13.PNG)   
 
 성공적으로 모든 항목이 utf8mb4로 변경된 것을 확인하였습니다.   
 빠르게 타임존까지 아래 쿼리로 확인해 봅니다.   
 ```
 select @@time_zone, now();
 ```
-![14]()   
+![14](https://raw.githubusercontent.com/smpark1020/tistory/master/AWS/%5BRDS%5D%20AWS%EC%97%90%20%EB%8D%B0%EC%9D%B4%ED%84%B0%EB%B2%A0%EC%9D%B4%EC%8A%A4%20%ED%99%98%EA%B2%BD%20%EB%A7%8C%EB%93%A4%EA%B8%B0%203%20-%20%EB%82%B4%20PC%EC%97%90%EC%84%9C%20RDS%EC%97%90%20%EC%A0%91%EC%86%8D%ED%95%B4%20%EB%B3%B4%EA%B8%B0/14.PNG)   
 
 RDS 파라미터 그룹이 잘 적용되어 한국 시간으로 된 것을 확인하였습니다.   
 
@@ -90,7 +90,7 @@ select * from test;
 ```
 
 다음과 같이 한글 데이터도 잘 등록되는 것이 확인됩니다.   
-![15]()   
+![15](https://raw.githubusercontent.com/smpark1020/tistory/master/AWS/%5BRDS%5D%20AWS%EC%97%90%20%EB%8D%B0%EC%9D%B4%ED%84%B0%EB%B2%A0%EC%9D%B4%EC%8A%A4%20%ED%99%98%EA%B2%BD%20%EB%A7%8C%EB%93%A4%EA%B8%B0%203%20-%20%EB%82%B4%20PC%EC%97%90%EC%84%9C%20RDS%EC%97%90%20%EC%A0%91%EC%86%8D%ED%95%B4%20%EB%B3%B4%EA%B8%B0/15.PNG)   
 
 ## 참고
 * [이동욱님의 스프링 부트와 AWS로 혼자 구현하는 웹 서비스](https://jojoldu.tistory.com/463)
