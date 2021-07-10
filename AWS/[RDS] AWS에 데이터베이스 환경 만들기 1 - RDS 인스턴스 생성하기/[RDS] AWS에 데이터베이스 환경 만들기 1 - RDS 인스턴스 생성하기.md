@@ -11,8 +11,8 @@ RDS는 AWS에서 지원하는 클라우드 기반 관계형 데이터베이스�
 ## RDS 인스턴스 생성하기
 먼저 RDS 인스턴스를 생성하겠습니다.   
 다음과 같이 검색창에 rds를 입력해서 선택하고, RDS 대시보드에서 [데이터베이스 생성] 버튼을 클릭합니다.   
-![1]()   
-![2]()   
+![1](https://raw.githubusercontent.com/smpark1020/tistory/master/AWS/%5BRDS%5D%20AWS%EC%97%90%20%EB%8D%B0%EC%9D%B4%ED%84%B0%EB%B2%A0%EC%9D%B4%EC%8A%A4%20%ED%99%98%EA%B2%BD%20%EB%A7%8C%EB%93%A4%EA%B8%B0%201%20-%20RDS%20%EC%9D%B8%EC%8A%A4%ED%84%B4%EC%8A%A4%20%EC%83%9D%EC%84%B1%ED%95%98%EA%B8%B0/1.PNG)   
+![2](https://raw.githubusercontent.com/smpark1020/tistory/master/AWS/%5BRDS%5D%20AWS%EC%97%90%20%EB%8D%B0%EC%9D%B4%ED%84%B0%EB%B2%A0%EC%9D%B4%EC%8A%A4%20%ED%99%98%EA%B2%BD%20%EB%A7%8C%EB%93%A4%EA%B8%B0%201%20-%20RDS%20%EC%9D%B8%EC%8A%A4%ED%84%B4%EC%8A%A4%20%EC%83%9D%EC%84%B1%ED%95%98%EA%B8%B0/2.PNG)   
 
 RDS 생성 과정이 진행됩니다.   
 DB 엔진 선택 화면에서 MariaDB를 선택하도록 하겠습니다.   
@@ -53,31 +53,31 @@ MySQL을 기반으로 만들어졌기 때문에 쿼리를 비롯한 전반적인
 * 다양한 스토리지 엔진
 
 이제 다시 MariaDB를 선택하여 다음으로 이동합니다.   
-![3]()   
+![3](https://raw.githubusercontent.com/smpark1020/tistory/master/AWS/%5BRDS%5D%20AWS%EC%97%90%20%EB%8D%B0%EC%9D%B4%ED%84%B0%EB%B2%A0%EC%9D%B4%EC%8A%A4%20%ED%99%98%EA%B2%BD%20%EB%A7%8C%EB%93%A4%EA%B8%B0%201%20-%20RDS%20%EC%9D%B8%EC%8A%A4%ED%84%B4%EC%8A%A4%20%EC%83%9D%EC%84%B1%ED%95%98%EA%B8%B0/3.PNG)   
 
 다음으로 넘어가면 사용 사례 항목이 나옵니다.   
 프리티어로 이용하려면 프리티어를 선택해야 하니 [프리티어]를 선택합니다.   
-![4]()   
+![4](https://raw.githubusercontent.com/smpark1020/tistory/master/AWS/%5BRDS%5D%20AWS%EC%97%90%20%EB%8D%B0%EC%9D%B4%ED%84%B0%EB%B2%A0%EC%9D%B4%EC%8A%A4%20%ED%99%98%EA%B2%BD%20%EB%A7%8C%EB%93%A4%EA%B8%B0%201%20-%20RDS%20%EC%9D%B8%EC%8A%A4%ED%84%B4%EC%8A%A4%20%EC%83%9D%EC%84%B1%ED%95%98%EA%B8%B0/4.PNG)   
 
 DB 인스턴스와 마스터 사용자 정보를 등록할 수 있습니다.   
-![6]()
+![6](https://raw.githubusercontent.com/smpark1020/tistory/master/AWS/%5BRDS%5D%20AWS%EC%97%90%20%EB%8D%B0%EC%9D%B4%ED%84%B0%EB%B2%A0%EC%9D%B4%EC%8A%A4%20%ED%99%98%EA%B2%BD%20%EB%A7%8C%EB%93%A4%EA%B8%B0%201%20-%20RDS%20%EC%9D%B8%EC%8A%A4%ED%84%B4%EC%8A%A4%20%EC%83%9D%EC%84%B1%ED%95%98%EA%B8%B0/6.PNG)
 
 상세 설정에서는 다음 그림과 같은 설정을 합니다.   
-![5]()
+![5](https://raw.githubusercontent.com/smpark1020/tistory/master/AWS/%5BRDS%5D%20AWS%EC%97%90%20%EB%8D%B0%EC%9D%B4%ED%84%B0%EB%B2%A0%EC%9D%B4%EC%8A%A4%20%ED%99%98%EA%B2%BD%20%EB%A7%8C%EB%93%A4%EA%B8%B0%201%20-%20RDS%20%EC%9D%B8%EC%8A%A4%ED%84%B4%EC%8A%A4%20%EC%83%9D%EC%84%B1%ED%95%98%EA%B8%B0/5.PNG)
 
 본인만의 DB 인스턴스 이름과 사용자 정보를 등록합니다.   
 여기서 사용된 사용자 정보로 실제 데이터베이스에 접근하게 되니 어딘가 메모해 놓아도 좋습니다.   
 
 네트워크에선 퍼블릭 엑세스를 [예]로 변경합니다.   
 이후 보안 그룹에서 지정된 IP만 접근하도록 막을 예정입니다.   
-![7]()   
+![7](https://raw.githubusercontent.com/smpark1020/tistory/master/AWS/%5BRDS%5D%20AWS%EC%97%90%20%EB%8D%B0%EC%9D%B4%ED%84%B0%EB%B2%A0%EC%9D%B4%EC%8A%A4%20%ED%99%98%EA%B2%BD%20%EB%A7%8C%EB%93%A4%EA%B8%B0%201%20-%20RDS%20%EC%9D%B8%EC%8A%A4%ED%84%B4%EC%8A%A4%20%EC%83%9D%EC%84%B1%ED%95%98%EA%B8%B0/7.PNG)   
 
 데이터베이스 옵션에서는 이름을 제외한 나머지를 그림과 동일하게 하면 됩니다.   
 파라미터 그룹의 변경을 이후에 진행할 예정이니 일단은 기본값으로 둡니다.   
-![8]()   
+![8](https://raw.githubusercontent.com/smpark1020/tistory/master/AWS/%5BRDS%5D%20AWS%EC%97%90%20%EB%8D%B0%EC%9D%B4%ED%84%B0%EB%B2%A0%EC%9D%B4%EC%8A%A4%20%ED%99%98%EA%B2%BD%20%EB%A7%8C%EB%93%A4%EA%B8%B0%201%20-%20RDS%20%EC%9D%B8%EC%8A%A4%ED%84%B4%EC%8A%A4%20%EC%83%9D%EC%84%B1%ED%95%98%EA%B8%B0/8.PNG)   
 
 모든 설정이 끝나서 [데이터베이스 생성] 버튼을 클릭하여 다음과 같이 생성 과정이 진행됩니다.    
-![9]()   
+![9](https://raw.githubusercontent.com/smpark1020/tistory/master/AWS/%5BRDS%5D%20AWS%EC%97%90%20%EB%8D%B0%EC%9D%B4%ED%84%B0%EB%B2%A0%EC%9D%B4%EC%8A%A4%20%ED%99%98%EA%B2%BD%20%EB%A7%8C%EB%93%A4%EA%B8%B0%201%20-%20RDS%20%EC%9D%B8%EC%8A%A4%ED%84%B4%EC%8A%A4%20%EC%83%9D%EC%84%B1%ED%95%98%EA%B8%B0/9.PNG)   
 
 ## 참고
 * [이동욱님의 스프링 부트와 AWS로 혼자 구현하는 웹 서비스](https://jojoldu.tistory.com/463)
