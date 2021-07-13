@@ -122,6 +122,18 @@ chmod +x ./deploy.sh
 그리고 다시 확인해 보면 x 권한이 추가된 것을 확인할 수 있습니다.   
 ![1]()   
 
+스크립트를 실행하기 전에 아직 RDS 설정을 하지 않았기 때문에 application.properteis의 DB 설정을 내장 h2로 변경해줘야 합니다.
+```
+# DB 세팅
+#spring.datasource.hikari.jdbc-url=jdbc:h2:tcp://localhost/~/usedcar;MODE=MYSQL
+spring.datasource.hikari.jdbc-url=jdbc:h2:mem:testdb;MODE=MYSQL
+spring.datasource.hikari.username=sa
+
+# ddl-auto 세팅
+#spring.jpa.hibernate.ddl-auto=validate
+spring.jpa.hibernate.ddl-auto=create
+```
+
 이제 이 스크립트를 다음 명령어로 실행합니다.
 ```
 ./deploy.sh
@@ -130,9 +142,16 @@ chmod +x ./deploy.sh
 그럼 다음과 같이 로그가 출력되며 애플리케이션이 실행됩니다.   
 ![2]()   
 
+잘 실행되었으니 nohup.out 파일을 열어 로그를 보겠습니다.   
+nohup.out은 실행되는 애플리케이션에서 출력되는 모든 내용을 갖고 있습니다.   
+```
+vim nohup.out
+```
 
+nohup.out 제일 아래로 가면 ClientRegistrationRepository를 찾을 수 없다(that could not be found.)는 에러가 발생하면서 애플리케이션 실행에 실패했다는 것을 알 수 있습니다.   
+![3]()   
 
-
+이렇게 된 이유는 다음 글에서 계속하겠습니다.
 
 ## 참고
 * [이동욱님의 스프링 부트와 AWS로 혼자 구현하는 웹 서비스](https://jojoldu.tistory.com/463)
