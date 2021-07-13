@@ -76,43 +76,35 @@ echo "> JAR Name: $JAR_NAME"
 nohup java -jar $REPOSITORY/$JAR_NAME 2>&1 &
 ```
 1. REPOSITORY=/home/ec2-user/app/step1
-* 프로젝트 디렉토리 주소는 스크립트 내에서 자주 사용되는 값이기 때문에 이를 변수로 저장합니다.
-* 마찬가지로 PROJECT_NAME=used-car-admin도 동일하게 변수로 저장합니다.
-* 쉘에서는 타입 없이 선언하여 저장합니다.
-* 쉘에서는 $변수명으로 변수를 사용할 수 있습니다.
-
+  * 프로젝트 디렉토리 주소는 스크립트 내에서 자주 사용되는 값이기 때문에 이를 변수로 저장합니다.
+  * 마찬가지로 PROJECT_NAME=used-car-admin도 동일하게 변수로 저장합니다.
+  * 쉘에서는 타입 없이 선언하여 저장합니다.
+  * 쉘에서는 $변수명으로 변수를 사용할 수 있습니다.
 2. cd $REPOSITORY/$PROJECT_NAME/
-* 제일 처음 git clone 받았던 디렉토리로 이동합니다.
-* 바로 위의 쉘 변수 설명을 따라 /home/ec2-user/app/step1/used-car-admin 주소로 이동합니다.
-
+  * 제일 처음 git clone 받았던 디렉토리로 이동합니다.
+  * 바로 위의 쉘 변수 설명을 따라 /home/ec2-user/app/step1/used-car-admin 주소로 이동합니다.
 3. git pull origin master
-* 디렉토리 이동 후, master 브랜치의 최신 내용을 받습니다.
-
+  * 디렉토리 이동 후, master 브랜치의 최신 내용을 받습니다.
 4. ./mvnw package
-* 프로젝트 내부의 mvnw로 package를 수행합니다.
-
+  * 프로젝트 내부의 mvnw로 package를 수행합니다.
 5. cp ./target/*.jar $REPOSITORY/
-* build의 결과물인 jar 파일을 복사해 jar 파일을 모아둔 위치로 복사합니다.
-
+  * build의 결과물인 jar 파일을 복사해 jar 파일을 모아둔 위치로 복사합니다.
 6. CURRENT_PID=$(pgrep -f ${PROJECT_NAME}.*.jar)
-* 기존에 수행 중이던 스프링 부트 애플리케이션을 종료합니다.
-* pgrep은 process id만 추출하는 명령어입니다.
-* -f 옵션은 프로세스 이름으로 찾습니다.
-
+  * 기존에 수행 중이던 스프링 부트 애플리케이션을 종료합니다.
+  * pgrep은 process id만 추출하는 명령어입니다.
+  * -f 옵션은 프로세스 이름으로 찾습니다.
 7. if ~ else ~ fi
-* 현재 구동 중인 프로세스가 있는지 없는지를 판단해서 기능을 수행합니다.
-* process id 값을 보고 프로세스가 있으면 해당 프로세스를 종료합니다.
-
+  * 현재 구동 중인 프로세스가 있는지 없는지를 판단해서 기능을 수행합니다.
+  * process id 값을 보고 프로세스가 있으면 해당 프로세스를 종료합니다.
 8. JAR_NAME=$(ls -tr $REPOSITORY/ | grep jar | tail -n 1)
-* 새로 실행할 jar 파일명을 찾습니다.
-* 여러 jar 파일이 생기기 때문에 tail -n으로 가장 나중의 jar 파일(최신파일)을 변수에 저장합니다.
-
+  * 새로 실행할 jar 파일명을 찾습니다.
+  * 여러 jar 파일이 생기기 때문에 tail -n으로 가장 나중의 jar 파일(최신파일)을 변수에 저장합니다.
 9. nohup java -jar $REPOSITORY/$JAR_NAME 2>&1 &
-* 찾은 jar 파일명으로 해당 jar 파일을 nohup으로 실행합니다.
-* 스프링 부트의 장점으로 특별히 외장 톰캣을 설치할 필요가 없습니다.
-* 내장 톰캣을 사용해서 jar 파일만 있으면 바로 웹 애플리케이션 서버를 실행할 수 있습니다.
-* 일반적으로 자바를 실행할 때는 java -jar라는 명령어를 사용하지만, 이렇게 하면 사용자가 터미널 접속을 끊을 때 애플리케이션도 같이 종료됩니다.
-* 애플리케이션 실행자가 터미널을 종료해도 애플리케이션은 계속 구동될 수 있도록 nohup 명령어를 사용합니다.
+  * 찾은 jar 파일명으로 해당 jar 파일을 nohup으로 실행합니다.
+  * 스프링 부트의 장점으로 특별히 외장 톰캣을 설치할 필요가 없습니다.
+  * 내장 톰캣을 사용해서 jar 파일만 있으면 바로 웹 애플리케이션 서버를 실행할 수 있습니다.
+  * 일반적으로 자바를 실행할 때는 java -jar라는 명령어를 사용하지만, 이렇게 하면 사용자가 터미널 접속을 끊을 때 애플리케이션도 같이 종료됩니다.
+  * 애플리케이션 실행자가 터미널을 종료해도 애플리케이션은 계속 구동될 수 있도록 nohup 명령어를 사용합니다.
 
 이렇게 생성한 스크립트에 실행 권한을 추가합니다.
 ```
@@ -120,7 +112,7 @@ chmod +x ./deploy.sh
 ```
 
 그리고 다시 확인해 보면 x 권한이 추가된 것을 확인할 수 있습니다.   
-![1]()   
+![1](https://raw.githubusercontent.com/smpark1020/tistory/master/AWS/%5BEC2%5D%20EC2%20%EC%84%9C%EB%B2%84%EC%97%90%20%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8%20%EB%B0%B0%ED%8F%AC%ED%95%98%EA%B8%B0%202%20-%20%EB%B0%B0%ED%8F%AC%20%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8%20%EB%A7%8C%EB%93%A4%EA%B8%B0/1.PNG)   
 
 스크립트를 실행하기 전에 아직 RDS 설정을 하지 않았기 때문에 application.properteis의 DB 설정을 내장 h2로 변경해줘야 합니다.
 ```
@@ -140,7 +132,7 @@ spring.jpa.hibernate.ddl-auto=create
 ```
 
 그럼 다음과 같이 로그가 출력되며 애플리케이션이 실행됩니다.   
-![2]()   
+![2](https://raw.githubusercontent.com/smpark1020/tistory/master/AWS/%5BEC2%5D%20EC2%20%EC%84%9C%EB%B2%84%EC%97%90%20%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8%20%EB%B0%B0%ED%8F%AC%ED%95%98%EA%B8%B0%202%20-%20%EB%B0%B0%ED%8F%AC%20%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8%20%EB%A7%8C%EB%93%A4%EA%B8%B0/2.PNG)   
 
 잘 실행되었으니 nohup.out 파일을 열어 로그를 보겠습니다.   
 nohup.out은 실행되는 애플리케이션에서 출력되는 모든 내용을 갖고 있습니다.   
@@ -149,7 +141,7 @@ vim nohup.out
 ```
 
 nohup.out 제일 아래로 가면 ClientRegistrationRepository를 찾을 수 없다(that could not be found.)는 에러가 발생하면서 애플리케이션 실행에 실패했다는 것을 알 수 있습니다.   
-![3]()   
+![3](https://raw.githubusercontent.com/smpark1020/tistory/master/AWS/%5BEC2%5D%20EC2%20%EC%84%9C%EB%B2%84%EC%97%90%20%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8%20%EB%B0%B0%ED%8F%AC%ED%95%98%EA%B8%B0%202%20-%20%EB%B0%B0%ED%8F%AC%20%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8%20%EB%A7%8C%EB%93%A4%EA%B8%B0/3.PNG)   
 
 이렇게 된 이유는 다음 글에서 계속하겠습니다.
 
