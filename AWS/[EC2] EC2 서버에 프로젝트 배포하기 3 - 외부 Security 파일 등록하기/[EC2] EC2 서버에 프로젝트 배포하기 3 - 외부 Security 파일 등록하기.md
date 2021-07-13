@@ -28,7 +28,7 @@ nohup java -jar \
 
 수정이 다 되었다면 다시 deploy.sh를 실행해 봅니다.   
 그럼 다음과 같이 정상적으로 실행된 것을 확인할 수 있습니다.    
-![1]()
+![1](https://raw.githubusercontent.com/smpark1020/tistory/master/AWS/%5BEC2%5D%20EC2%20%EC%84%9C%EB%B2%84%EC%97%90%20%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8%20%EB%B0%B0%ED%8F%AC%ED%95%98%EA%B8%B0%203%20-%20%EC%99%B8%EB%B6%80%20Security%20%ED%8C%8C%EC%9D%BC%20%EB%93%B1%EB%A1%9D%ED%95%98%EA%B8%B0/1.PNG)
 
 ## 참고
 * [이동욱님의 스프링 부트와 AWS로 혼자 구현하는 웹 서비스](https://jojoldu.tistory.com/463)
