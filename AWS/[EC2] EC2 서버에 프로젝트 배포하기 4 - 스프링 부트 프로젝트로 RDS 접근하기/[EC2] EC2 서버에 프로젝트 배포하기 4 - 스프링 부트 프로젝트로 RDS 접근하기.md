@@ -146,7 +146,7 @@ nohup java -jar \
 
 이렇게 설정된 후 다시 한번 deploy.sh를 실행해 봅니다.   
 nohup.out 파일을 열어 다음과 같이 로그가 보인다면 성공적으로 수행된 것입니다.   
-![2]()
+![2](https://raw.githubusercontent.com/smpark1020/tistory/master/AWS/%5BEC2%5D%20EC2%20%EC%84%9C%EB%B2%84%EC%97%90%20%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8%20%EB%B0%B0%ED%8F%AC%ED%95%98%EA%B8%B0%204%20-%20%EC%8A%A4%ED%94%84%EB%A7%81%20%EB%B6%80%ED%8A%B8%20%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8%EB%A1%9C%20RDS%20%EC%A0%91%EA%B7%BC%ED%95%98%EA%B8%B0/2.PNG)
 
 curl 명령어로 html 코드가 정상적으로 보인다면 성공입니다.
 ```
