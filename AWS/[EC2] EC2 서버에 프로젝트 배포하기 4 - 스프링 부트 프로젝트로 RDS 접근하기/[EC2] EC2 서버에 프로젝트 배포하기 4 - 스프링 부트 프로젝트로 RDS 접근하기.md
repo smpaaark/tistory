@@ -118,7 +118,7 @@ logging.level.org.hibernate.SQL=debug
 logging.level.org.hibernate.type=trace
 
 # DB 세팅
-spring.datasource.hikari.jdbc-url=mariadb://rds주소:포트명(기본은 3306)/database이름
+spring.datasource.hikari.jdbc-url=jdbc:mariadb://rds주소:포트명(기본은 3306)/database이름
 spring.datasource.hikari.username=db계정
 spring.datasource.hikari.password=db계정 비밀번호
 spring.datasource.hikari.driver-class-name=org.mariadb.jdbc.Driver
@@ -146,7 +146,12 @@ nohup java -jar \
 
 이렇게 설정된 후 다시 한번 deploy.sh를 실행해 봅니다.   
 nohup.out 파일을 열어 다음과 같이 로그가 보인다면 성공적으로 수행된 것입니다.   
+![2]()
 
+curl 명령어로 html 코드가 정상적으로 보인다면 성공입니다.
+```
+curl localhost:8080
+```
 
 ## 참고
 * [이동욱님의 스프링 부트와 AWS로 혼자 구현하는 웹 서비스](https://jojoldu.tistory.com/463)
