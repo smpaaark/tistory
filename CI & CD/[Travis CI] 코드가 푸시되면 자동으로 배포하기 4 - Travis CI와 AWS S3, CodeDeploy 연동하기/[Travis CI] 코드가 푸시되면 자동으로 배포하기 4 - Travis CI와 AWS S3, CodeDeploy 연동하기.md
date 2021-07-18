@@ -3,7 +3,7 @@ AWS의 배포 시스템인 CodeDeploy를 이용하기 전에 배포 대상인 EC
 ## EC2에 IAM 역할 추가하기
 S3와 마찬가지로 IAM을 검색하고, 이번에는 [역할] 탭을 클릭해서 이동합니다.   
 [역할 => 역할 만들기] 버튼을 차례로 클릭합니다.   
-![1]()   
+![1](https://raw.githubusercontent.com/smpark1020/tistory/master/CI%20%26%20CD/%5BTravis%20CI%5D%20%EC%BD%94%EB%93%9C%EA%B0%80%20%ED%91%B8%EC%8B%9C%EB%90%98%EB%A9%B4%20%EC%9E%90%EB%8F%99%EC%9C%BC%EB%A1%9C%20%EB%B0%B0%ED%8F%AC%ED%95%98%EA%B8%B0%204%20-%20Travis%20CI%EC%99%80%20AWS%20S3%2C%20CodeDeploy%20%EC%97%B0%EB%8F%99%ED%95%98%EA%B8%B0/1.PNG)   
 
 앞에서 만들었던 IAM의 사용자와 역할의 차이
 * 역할
@@ -15,27 +15,27 @@ S3와 마찬가지로 IAM을 검색하고, 이번에는 [역할] 탭을 클릭�
 
 지금 만들 권한은 EC2에서 사용할 것이기 때문에 사용자가 아닌 역할로 처리합니다.   
 서비스 선택에서는 [AWS 서비스 => EC2]를 차례로 선택합니다.   
-![2]()   
+![2](https://raw.githubusercontent.com/smpark1020/tistory/master/CI%20%26%20CD/%5BTravis%20CI%5D%20%EC%BD%94%EB%93%9C%EA%B0%80%20%ED%91%B8%EC%8B%9C%EB%90%98%EB%A9%B4%20%EC%9E%90%EB%8F%99%EC%9C%BC%EB%A1%9C%20%EB%B0%B0%ED%8F%AC%ED%95%98%EA%B8%B0%204%20-%20Travis%20CI%EC%99%80%20AWS%20S3%2C%20CodeDeploy%20%EC%97%B0%EB%8F%99%ED%95%98%EA%B8%B0/2.PNG)   
 
 정책에선 EC2RoleForA를 검색하여 AmazonEC2RoleforAWS-CodeDeploy를 선택합니다.   
-![3]()   
+![3](https://raw.githubusercontent.com/smpark1020/tistory/master/CI%20%26%20CD/%5BTravis%20CI%5D%20%EC%BD%94%EB%93%9C%EA%B0%80%20%ED%91%B8%EC%8B%9C%EB%90%98%EB%A9%B4%20%EC%9E%90%EB%8F%99%EC%9C%BC%EB%A1%9C%20%EB%B0%B0%ED%8F%AC%ED%95%98%EA%B8%B0%204%20-%20Travis%20CI%EC%99%80%20AWS%20S3%2C%20CodeDeploy%20%EC%97%B0%EB%8F%99%ED%95%98%EA%B8%B0/3.PNG)   
 
 태그는 본인이 원하는 이름으로 짓습니다.   
-![4]()   
+![4](https://raw.githubusercontent.com/smpark1020/tistory/master/CI%20%26%20CD/%5BTravis%20CI%5D%20%EC%BD%94%EB%93%9C%EA%B0%80%20%ED%91%B8%EC%8B%9C%EB%90%98%EB%A9%B4%20%EC%9E%90%EB%8F%99%EC%9C%BC%EB%A1%9C%20%EB%B0%B0%ED%8F%AC%ED%95%98%EA%B8%B0%204%20-%20Travis%20CI%EC%99%80%20AWS%20S3%2C%20CodeDeploy%20%EC%97%B0%EB%8F%99%ED%95%98%EA%B8%B0/4.PNG)   
 
 마지막으로 역할의 이름을 등록하고 나머지 등록 정보를 최종적으로 확인합니다.   
-![5]()   
+![5](https://raw.githubusercontent.com/smpark1020/tistory/master/CI%20%26%20CD/%5BTravis%20CI%5D%20%EC%BD%94%EB%93%9C%EA%B0%80%20%ED%91%B8%EC%8B%9C%EB%90%98%EB%A9%B4%20%EC%9E%90%EB%8F%99%EC%9C%BC%EB%A1%9C%20%EB%B0%B0%ED%8F%AC%ED%95%98%EA%B8%B0%204%20-%20Travis%20CI%EC%99%80%20AWS%20S3%2C%20CodeDeploy%20%EC%97%B0%EB%8F%99%ED%95%98%EA%B8%B0/5.PNG)   
 
 이렇게 만든 역할을 EC2 서비스에 등록하겠습니다.   
 EC2의 인스턴스 목록으로 이동한 뒤, 본인의 인스턴스를 마우스 오른쪽 버튼으로 눌러 [보안 => IAM 역할 수정]를 차례로 선택합니다.   
-![6]()   
+![6](https://raw.githubusercontent.com/smpark1020/tistory/master/CI%20%26%20CD/%5BTravis%20CI%5D%20%EC%BD%94%EB%93%9C%EA%B0%80%20%ED%91%B8%EC%8B%9C%EB%90%98%EB%A9%B4%20%EC%9E%90%EB%8F%99%EC%9C%BC%EB%A1%9C%20%EB%B0%B0%ED%8F%AC%ED%95%98%EA%B8%B0%204%20-%20Travis%20CI%EC%99%80%20AWS%20S3%2C%20CodeDeploy%20%EC%97%B0%EB%8F%99%ED%95%98%EA%B8%B0/6.PNG)   
 
 방금 생성한 역할을 선택합니다.   
-![7]()   
+![7](https://raw.githubusercontent.com/smpark1020/tistory/master/CI%20%26%20CD/%5BTravis%20CI%5D%20%EC%BD%94%EB%93%9C%EA%B0%80%20%ED%91%B8%EC%8B%9C%EB%90%98%EB%A9%B4%20%EC%9E%90%EB%8F%99%EC%9C%BC%EB%A1%9C%20%EB%B0%B0%ED%8F%AC%ED%95%98%EA%B8%B0%204%20-%20Travis%20CI%EC%99%80%20AWS%20S3%2C%20CodeDeploy%20%EC%97%B0%EB%8F%99%ED%95%98%EA%B8%B0/7.PNG)   
 
 역할 선택이 완료되면 해당 EC2 인스턴스를 재부팅 합니다.   
 재부팅을 해야만 역할이 정상적으로 적용되니 꼭 한 번은 재부팅해 주세요.   
-![8]()   
+![8](https://raw.githubusercontent.com/smpark1020/tistory/master/CI%20%26%20CD/%5BTravis%20CI%5D%20%EC%BD%94%EB%93%9C%EA%B0%80%20%ED%91%B8%EC%8B%9C%EB%90%98%EB%A9%B4%20%EC%9E%90%EB%8F%99%EC%9C%BC%EB%A1%9C%20%EB%B0%B0%ED%8F%AC%ED%95%98%EA%B8%B0%204%20-%20Travis%20CI%EC%99%80%20AWS%20S3%2C%20CodeDeploy%20%EC%97%B0%EB%8F%99%ED%95%98%EA%B8%B0/8.PNG)   
 
 ## CodeDeploy 에이전트 설치
 EC2에 접속해서 다음 명령어를 입력합니다.   
@@ -44,7 +44,7 @@ aws s3 cp s3://aws-codedeploy-ap-northeast-2/latest/install . --region ap-northe
 ```
 
 내려받기가 성공했다면 다음과 같은 메시지가 콘솔에 출력됩니다.   
-![9]()   
+![9](https://raw.githubusercontent.com/smpark1020/tistory/master/CI%20%26%20CD/%5BTravis%20CI%5D%20%EC%BD%94%EB%93%9C%EA%B0%80%20%ED%91%B8%EC%8B%9C%EB%90%98%EB%A9%B4%20%EC%9E%90%EB%8F%99%EC%9C%BC%EB%A1%9C%20%EB%B0%B0%ED%8F%AC%ED%95%98%EA%B8%B0%204%20-%20Travis%20CI%EC%99%80%20AWS%20S3%2C%20CodeDeploy%20%EC%97%B0%EB%8F%99%ED%95%98%EA%B8%B0/9.PNG)   
 
 install 파일에 실행 권한이 없으니 실행 권한을 추가합니다.   
 ```
@@ -67,22 +67,22 @@ sudo service codedeploy-agent status
 ```
 
 다음과 같이 running 메시지가 출력되면 정상입니다.   
-![10]()   
+![10](https://raw.githubusercontent.com/smpark1020/tistory/master/CI%20%26%20CD/%5BTravis%20CI%5D%20%EC%BD%94%EB%93%9C%EA%B0%80%20%ED%91%B8%EC%8B%9C%EB%90%98%EB%A9%B4%20%EC%9E%90%EB%8F%99%EC%9C%BC%EB%A1%9C%20%EB%B0%B0%ED%8F%AC%ED%95%98%EA%B8%B0%204%20-%20Travis%20CI%EC%99%80%20AWS%20S3%2C%20CodeDeploy%20%EC%97%B0%EB%8F%99%ED%95%98%EA%B8%B0/10.PNG)   
 
 ## CodeDeploy를 위한 권한 생성
 CodeDeploy에서 EC2에 접근하려면 마찬가지로 권한이 필요합니다.   
 AWS의 서비스이니 IAM 역할을 생성합니다.   
 서비스는 [AWS 서비스 => CodeDeploy]를 차례로 선택합니다.   
-![11]()   
+![11](https://raw.githubusercontent.com/smpark1020/tistory/master/CI%20%26%20CD/%5BTravis%20CI%5D%20%EC%BD%94%EB%93%9C%EA%B0%80%20%ED%91%B8%EC%8B%9C%EB%90%98%EB%A9%B4%20%EC%9E%90%EB%8F%99%EC%9C%BC%EB%A1%9C%20%EB%B0%B0%ED%8F%AC%ED%95%98%EA%B8%B0%204%20-%20Travis%20CI%EC%99%80%20AWS%20S3%2C%20CodeDeploy%20%EC%97%B0%EB%8F%99%ED%95%98%EA%B8%B0/11.PNG)   
 
 CodeDeploy는 권한이 하나뿐이라서 선택 없이 바로 다음으로 넘어가면 됩니다.   
-![12]()   
+![12](https://raw.githubusercontent.com/smpark1020/tistory/master/CI%20%26%20CD/%5BTravis%20CI%5D%20%EC%BD%94%EB%93%9C%EA%B0%80%20%ED%91%B8%EC%8B%9C%EB%90%98%EB%A9%B4%20%EC%9E%90%EB%8F%99%EC%9C%BC%EB%A1%9C%20%EB%B0%B0%ED%8F%AC%ED%95%98%EA%B8%B0%204%20-%20Travis%20CI%EC%99%80%20AWS%20S3%2C%20CodeDeploy%20%EC%97%B0%EB%8F%99%ED%95%98%EA%B8%B0/12.PNG)   
 
 태그 역시 본인이 원하는 이름으로 짓습니다.   
-![13]()   
+![13](https://raw.githubusercontent.com/smpark1020/tistory/master/CI%20%26%20CD/%5BTravis%20CI%5D%20%EC%BD%94%EB%93%9C%EA%B0%80%20%ED%91%B8%EC%8B%9C%EB%90%98%EB%A9%B4%20%EC%9E%90%EB%8F%99%EC%9C%BC%EB%A1%9C%20%EB%B0%B0%ED%8F%AC%ED%95%98%EA%B8%B0%204%20-%20Travis%20CI%EC%99%80%20AWS%20S3%2C%20CodeDeploy%20%EC%97%B0%EB%8F%99%ED%95%98%EA%B8%B0/13.PNG)   
 
 CodeDeploy를 위한 역할 이름과 선택 항목들을 확인한 뒤 생성 완료를 합니다.   
-![14]()   
+![14](https://raw.githubusercontent.com/smpark1020/tistory/master/CI%20%26%20CD/%5BTravis%20CI%5D%20%EC%BD%94%EB%93%9C%EA%B0%80%20%ED%91%B8%EC%8B%9C%EB%90%98%EB%A9%B4%20%EC%9E%90%EB%8F%99%EC%9C%BC%EB%A1%9C%20%EB%B0%B0%ED%8F%AC%ED%95%98%EA%B8%B0%204%20-%20Travis%20CI%EC%99%80%20AWS%20S3%2C%20CodeDeploy%20%EC%97%B0%EB%8F%99%ED%95%98%EA%B8%B0/14.PNG)   
 
 ## CodeDeploy 생성
 CodeDeploy는 AWS의 배포 삼형제 중 하나입니다.   
@@ -102,30 +102,30 @@ CodeDeploy는 AWS의 배포 삼형제 중 하나입니다.
 그래서 우리가 추가로 사용할 서비스는 CodeDeploy입니다.   
 
 CodeDeploy 서비스로 이동해서 화면 중앙에 있는 [애플리케이션 생성] 버튼을 클릭합니다.   
-![15]()   
+![15](https://raw.githubusercontent.com/smpark1020/tistory/master/CI%20%26%20CD/%5BTravis%20CI%5D%20%EC%BD%94%EB%93%9C%EA%B0%80%20%ED%91%B8%EC%8B%9C%EB%90%98%EB%A9%B4%20%EC%9E%90%EB%8F%99%EC%9C%BC%EB%A1%9C%20%EB%B0%B0%ED%8F%AC%ED%95%98%EA%B8%B0%204%20-%20Travis%20CI%EC%99%80%20AWS%20S3%2C%20CodeDeploy%20%EC%97%B0%EB%8F%99%ED%95%98%EA%B8%B0/15.PNG)   
 
 생성할 CodeDeploy의 이름과 컴퓨팅 플랫폼을 선택합니다.   
 컴퓨팅 플랫폼에선 [EC2/온프레미스]를 선택하면 됩니다.   
-![16]()   
+![16](https://raw.githubusercontent.com/smpark1020/tistory/master/CI%20%26%20CD/%5BTravis%20CI%5D%20%EC%BD%94%EB%93%9C%EA%B0%80%20%ED%91%B8%EC%8B%9C%EB%90%98%EB%A9%B4%20%EC%9E%90%EB%8F%99%EC%9C%BC%EB%A1%9C%20%EB%B0%B0%ED%8F%AC%ED%95%98%EA%B8%B0%204%20-%20Travis%20CI%EC%99%80%20AWS%20S3%2C%20CodeDeploy%20%EC%97%B0%EB%8F%99%ED%95%98%EA%B8%B0/16.PNG)   
 
 생성이 완료되면 배포 그룹을 생성하라는 메시지를 볼 수 있습니다.   
 화면 중앙의 [배포 그룹 생성] 버튼을 클릭합니다.   
-![17]()   
+![17](https://raw.githubusercontent.com/smpark1020/tistory/master/CI%20%26%20CD/%5BTravis%20CI%5D%20%EC%BD%94%EB%93%9C%EA%B0%80%20%ED%91%B8%EC%8B%9C%EB%90%98%EB%A9%B4%20%EC%9E%90%EB%8F%99%EC%9C%BC%EB%A1%9C%20%EB%B0%B0%ED%8F%AC%ED%95%98%EA%B8%B0%204%20-%20Travis%20CI%EC%99%80%20AWS%20S3%2C%20CodeDeploy%20%EC%97%B0%EB%8F%99%ED%95%98%EA%B8%B0/17.PNG)   
 
 배포 그룹 이름과 서비스 역할을 등록합니다.   
 서비스 역할은 좀 전에 생성한 CodeDeploy용 IAM 역할을 선택하면 됩니다.   
-![18]()   
+![18](https://raw.githubusercontent.com/smpark1020/tistory/master/CI%20%26%20CD/%5BTravis%20CI%5D%20%EC%BD%94%EB%93%9C%EA%B0%80%20%ED%91%B8%EC%8B%9C%EB%90%98%EB%A9%B4%20%EC%9E%90%EB%8F%99%EC%9C%BC%EB%A1%9C%20%EB%B0%B0%ED%8F%AC%ED%95%98%EA%B8%B0%204%20-%20Travis%20CI%EC%99%80%20AWS%20S3%2C%20CodeDeploy%20%EC%97%B0%EB%8F%99%ED%95%98%EA%B8%B0/18.PNG)   
 
 배포 유형에서는 현재 위치를 선택합니다.   
 만약 본인이 배포할 서비스가 2대 이상이라면 블루/그린을 선택하면 됩니다.   
 여기선 1대의 EC2에만 배포하므로 선택하지 않습니다.   
-![19]()   
+![19](https://raw.githubusercontent.com/smpark1020/tistory/master/CI%20%26%20CD/%5BTravis%20CI%5D%20%EC%BD%94%EB%93%9C%EA%B0%80%20%ED%91%B8%EC%8B%9C%EB%90%98%EB%A9%B4%20%EC%9E%90%EB%8F%99%EC%9C%BC%EB%A1%9C%20%EB%B0%B0%ED%8F%AC%ED%95%98%EA%B8%B0%204%20-%20Travis%20CI%EC%99%80%20AWS%20S3%2C%20CodeDeploy%20%EC%97%B0%EB%8F%99%ED%95%98%EA%B8%B0/19.PNG)   
 
 환경 구성에서는 [Amazon EC2 인스턴스]에 체크합니다.   
-![20]()   
+![20](https://raw.githubusercontent.com/smpark1020/tistory/master/CI%20%26%20CD/%5BTravis%20CI%5D%20%EC%BD%94%EB%93%9C%EA%B0%80%20%ED%91%B8%EC%8B%9C%EB%90%98%EB%A9%B4%20%EC%9E%90%EB%8F%99%EC%9C%BC%EB%A1%9C%20%EB%B0%B0%ED%8F%AC%ED%95%98%EA%B8%B0%204%20-%20Travis%20CI%EC%99%80%20AWS%20S3%2C%20CodeDeploy%20%EC%97%B0%EB%8F%99%ED%95%98%EA%B8%B0/20.PNG)   
 
 마지막으로 다음과 같이 배포 구성을 선택하고 로드밸런싱 체크 해제합니다.   
-![21]()   
+![21](https://raw.githubusercontent.com/smpark1020/tistory/master/CI%20%26%20CD/%5BTravis%20CI%5D%20%EC%BD%94%EB%93%9C%EA%B0%80%20%ED%91%B8%EC%8B%9C%EB%90%98%EB%A9%B4%20%EC%9E%90%EB%8F%99%EC%9C%BC%EB%A1%9C%20%EB%B0%B0%ED%8F%AC%ED%95%98%EA%B8%B0%204%20-%20Travis%20CI%EC%99%80%20AWS%20S3%2C%20CodeDeploy%20%EC%97%B0%EB%8F%99%ED%95%98%EA%B8%B0/21.PNG)   
 
 배포 구성이란 한번 배포할 때 몇 대의 서버에 배포할지를 결정합니다.   
 2대 이상이라면 1대씩 배포할지, 30% 혹은 50%로 나눠서 배포할지 등등 여러 옵션을 선택하겠지만, 1대 서버다 보니 전체 배포하는 옵션으로 선택하면 됩니다.   
@@ -144,7 +144,7 @@ Travis CI의 Build가 끝나면 S3에 zip 파일이 전송되고, 이 zip 파일
 Travis CI의 설정은 .travis.yml로 진행했습니다.   
 
 AWS CodeDeploy의 설정은 appspec.yml로 진행합니다.   
-![22]()   
+![22](https://raw.githubusercontent.com/smpark1020/tistory/master/CI%20%26%20CD/%5BTravis%20CI%5D%20%EC%BD%94%EB%93%9C%EA%B0%80%20%ED%91%B8%EC%8B%9C%EB%90%98%EB%A9%B4%20%EC%9E%90%EB%8F%99%EC%9C%BC%EB%A1%9C%20%EB%B0%B0%ED%8F%AC%ED%95%98%EA%B8%B0%204%20-%20Travis%20CI%EC%99%80%20AWS%20S3%2C%20CodeDeploy%20%EC%97%B0%EB%8F%99%ED%95%98%EA%B8%B0/22.PNG)   
 
 코드는 다음과 같습니다.   
 ```
@@ -251,7 +251,7 @@ notifications:
 깃허브로 푸시가 되면 Travis CI가 자동으로 시작됩니다.   
 
 Travis CI가 끝나면 CodeDeploy 화면 아래에서 배포가 수행되는 것을 확인할 수 있습니다.   
-![23]()   
+![23](https://raw.githubusercontent.com/smpark1020/tistory/master/CI%20%26%20CD/%5BTravis%20CI%5D%20%EC%BD%94%EB%93%9C%EA%B0%80%20%ED%91%B8%EC%8B%9C%EB%90%98%EB%A9%B4%20%EC%9E%90%EB%8F%99%EC%9C%BC%EB%A1%9C%20%EB%B0%B0%ED%8F%AC%ED%95%98%EA%B8%B0%204%20-%20Travis%20CI%EC%99%80%20AWS%20S3%2C%20CodeDeploy%20%EC%97%B0%EB%8F%99%ED%95%98%EA%B8%B0/23.PNG)   
 
 배포가 끝났다면 다음 명령어로 파일들이 잘 도착했는지 확인해 봅니다.   
 ```
@@ -259,7 +259,7 @@ cd /home/ec2-user/app/step2/zip
 ```
 
 그럼 다음과 같이 프로젝트 파일들이 잘 도착한 것을 확인할 수 있습니다.   
-![24]()   
+![24](https://raw.githubusercontent.com/smpark1020/tistory/master/CI%20%26%20CD/%5BTravis%20CI%5D%20%EC%BD%94%EB%93%9C%EA%B0%80%20%ED%91%B8%EC%8B%9C%EB%90%98%EB%A9%B4%20%EC%9E%90%EB%8F%99%EC%9C%BC%EB%A1%9C%20%EB%B0%B0%ED%8F%AC%ED%95%98%EA%B8%B0%204%20-%20Travis%20CI%EC%99%80%20AWS%20S3%2C%20CodeDeploy%20%EC%97%B0%EB%8F%99%ED%95%98%EA%B8%B0/24.PNG)   
 
 Travis CI와 S3, CodeDeploy가 연동이 완료되었습니다.
 
