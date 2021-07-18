@@ -6,10 +6,10 @@ Travis CI는 깃허브에서 제공하는 무료 CI 서비스입니다.
 
 ## Travis CI 웹 서비스 설정
 https://travis-ci.com/ 에서 깃허브 계정으로 로그인을 한 뒤, github 연동을 활성화 합니다.   
-![1]()   
+![1](https://raw.githubusercontent.com/smpark1020/tistory/master/CI%20%26%20CD/%5BTravis%20CI%5D%20%EC%BD%94%EB%93%9C%EA%B0%80%20%ED%91%B8%EC%8B%9C%EB%90%98%EB%A9%B4%20%EC%9E%90%EB%8F%99%EC%9C%BC%EB%A1%9C%20%EB%B0%B0%ED%8F%AC%ED%95%98%EA%B8%B0%202%20-%20Travis%20CI%20%EC%97%B0%EB%8F%99%ED%95%98%EA%B8%B0/1.PNG)   
 
 활성화한 저장소를 클릭하면 다음과 같이 저장소 빌드 히스토리 페이지로 이동합니다.   
-![2]()   
+![2](https://raw.githubusercontent.com/smpark1020/tistory/master/CI%20%26%20CD/%5BTravis%20CI%5D%20%EC%BD%94%EB%93%9C%EA%B0%80%20%ED%91%B8%EC%8B%9C%EB%90%98%EB%A9%B4%20%EC%9E%90%EB%8F%99%EC%9C%BC%EB%A1%9C%20%EB%B0%B0%ED%8F%AC%ED%95%98%EA%B8%B0%202%20-%20Travis%20CI%20%EC%97%B0%EB%8F%99%ED%95%98%EA%B8%B0/2.PNG)   
 
 ### 프로젝트 설정
 Travis CI의 상세한 설정은 프로젝트에 존재하는 .travis.yml 파일로 할 수 있습니다.   
@@ -62,10 +62,10 @@ notifications:
   * Travis CI 실행 완료 시 자동으로 알람이 가도록 설정합니다.
 
 여기까지 마친 뒤, master 브랜치에 커밋과 푸시를 하고, 좀 전의 Travis CI 저장소 페이지를 확인합니다.   
-![3]()   
+![3](https://raw.githubusercontent.com/smpark1020/tistory/master/CI%20%26%20CD/%5BTravis%20CI%5D%20%EC%BD%94%EB%93%9C%EA%B0%80%20%ED%91%B8%EC%8B%9C%EB%90%98%EB%A9%B4%20%EC%9E%90%EB%8F%99%EC%9C%BC%EB%A1%9C%20%EB%B0%B0%ED%8F%AC%ED%95%98%EA%B8%B0%202%20-%20Travis%20CI%20%EC%97%B0%EB%8F%99%ED%95%98%EA%B8%B0/3.PNG)   
 
 빌드가 성공한 것이 확인되면 .travis.yml에 등록한 이메일을 확인합니다.   
-![4]()   
+![4](https://raw.githubusercontent.com/smpark1020/tistory/master/CI%20%26%20CD/%5BTravis%20CI%5D%20%EC%BD%94%EB%93%9C%EA%B0%80%20%ED%91%B8%EC%8B%9C%EB%90%98%EB%A9%B4%20%EC%9E%90%EB%8F%99%EC%9C%BC%EB%A1%9C%20%EB%B0%B0%ED%8F%AC%ED%95%98%EA%B8%B0%202%20-%20Travis%20CI%20%EC%97%B0%EB%8F%99%ED%95%98%EA%B8%B0/4.PNG)   
 
 빌드가 성공했다는 것을 메일로도 잘 전달받아 확인했습니다.
 
