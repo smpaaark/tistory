@@ -139,29 +139,24 @@ hooks:
 
 모든 설정이 완료되었으니 깃허브로 커밋과 푸시를 합니다.   
 Travis CI에서 다음과 같이 성공 메시지를 확인하고 CodeDeploy에서도 배포가 성공한 것을 확인합니다.   
-![1]()   
+![1](https://raw.githubusercontent.com/smpark1020/tistory/master/CI%20%26%20CD/%5BTravis%20CI%5D%20%EC%BD%94%EB%93%9C%EA%B0%80%20%ED%91%B8%EC%8B%9C%EB%90%98%EB%A9%B4%20%EC%9E%90%EB%8F%99%EC%9C%BC%EB%A1%9C%20%EB%B0%B0%ED%8F%AC%ED%95%98%EA%B8%B0%205%20-%20%EB%B0%B0%ED%8F%AC%20%EC%9E%90%EB%8F%99%ED%99%94%20%EA%B5%AC%EC%84%B1/1.PNG)   
 
-![2]()   
+![2](https://raw.githubusercontent.com/smpark1020/tistory/master/CI%20%26%20CD/%5BTravis%20CI%5D%20%EC%BD%94%EB%93%9C%EA%B0%80%20%ED%91%B8%EC%8B%9C%EB%90%98%EB%A9%B4%20%EC%9E%90%EB%8F%99%EC%9C%BC%EB%A1%9C%20%EB%B0%B0%ED%8F%AC%ED%95%98%EA%B8%B0%205%20-%20%EB%B0%B0%ED%8F%AC%20%EC%9E%90%EB%8F%99%ED%99%94%20%EA%B5%AC%EC%84%B1/2.PNG)   
 
 웹 브라우저에서 EC2 도메인을 입력해서 확인해 봅니다.   
-![3]()   
+![3](https://raw.githubusercontent.com/smpark1020/tistory/master/CI%20%26%20CD/%5BTravis%20CI%5D%20%EC%BD%94%EB%93%9C%EA%B0%80%20%ED%91%B8%EC%8B%9C%EB%90%98%EB%A9%B4%20%EC%9E%90%EB%8F%99%EC%9C%BC%EB%A1%9C%20%EB%B0%B0%ED%8F%AC%ED%95%98%EA%B8%B0%205%20-%20%EB%B0%B0%ED%8F%AC%20%EC%9E%90%EB%8F%99%ED%99%94%20%EA%B5%AC%EC%84%B1/3.PNG)   
 
 ### 실제 배포 과정 체험
-pom.xml에서 프로젝트 버전을 변경합니다.   
-```
-<version>0.0.2-SNAPSHOT</version>
-```
-
-간단하게나마 변경된 내용을 알 수 있게 src/main/resources/templates/index.mustache 내용에 다음과 같이 Ver.2 텍스트를 추가합니다.   
+간단하게나마 변경된 내용을 알 수 있게 src/main/resources/templates/index.mustache 내용에 다음과 같이 ver.2 텍스트를 추가합니다.   
 ```
 ...
-<h1>🚘중고차 관리 프로그램 Ver.2🚖</h1>
+<h1>🚘중고차 관리 프로그램 ver.2🚖</h1>
 ...
 ```
 
 그리고 깃허브로 커밋과 푸시를 합니다.   
 그럼 다음과 같이 변경된 코드가 배포된 것을 확인할 수 있습니다.   
-![4]()
+![4](https://raw.githubusercontent.com/smpark1020/tistory/master/CI%20%26%20CD/%5BTravis%20CI%5D%20%EC%BD%94%EB%93%9C%EA%B0%80%20%ED%91%B8%EC%8B%9C%EB%90%98%EB%A9%B4%20%EC%9E%90%EB%8F%99%EC%9C%BC%EB%A1%9C%20%EB%B0%B0%ED%8F%AC%ED%95%98%EA%B8%B0%205%20-%20%EB%B0%B0%ED%8F%AC%20%EC%9E%90%EB%8F%99%ED%99%94%20%EA%B5%AC%EC%84%B1/4.PNG)
 
 ## 참고
 * [이동욱님의 스프링 부트와 AWS로 혼자 구현하는 웹 서비스](https://jojoldu.tistory.com/463)
