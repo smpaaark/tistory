@@ -330,7 +330,7 @@ http://localhost:8081/docs/index.html
 
 ## 로그 확인 방법
 로그는 프로젝트 폴더 내에 log/app.log에 저장됩니다.   
-![로그파일경로]()
+![로그파일경로](https://raw.githubusercontent.com/smpark1020/tistory/master/image/%EA%B3%BC%EC%A0%9C/%EB%A1%9C%EA%B7%B8%ED%8C%8C%EC%9D%BC%EA%B2%BD%EB%A1%9C.PNG)
 * 라이더 이동 로그   
 아래와 같은 형식으로 라이더 이동 로그를 출력합니다.
 ```
