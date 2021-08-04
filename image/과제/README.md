@@ -227,6 +227,7 @@ Spring Batch와 Quartz를 사용하여 구현했습니다.
 * 라이더 이동   
 10초마다 라이더를 이동 시킵니다.   
   * 라이더 배달 진행중   
+
   ![Rider_완료전](https://raw.githubusercontent.com/smpark1020/tistory/master/image/%EA%B3%BC%EC%A0%9C/Rider_%EC%99%84%EB%A3%8C%EC%A0%84.PNG)    
   ```
   2021-08-04 17:01:06.608  INFO 10160 --- [   scheduling-1] c.s.r.b.job.DeliveryJobConfiguration     : 
@@ -238,7 +239,8 @@ Spring Batch와 Quartz를 사용하여 구현했습니다.
   * 남은배송거리: 400
   ```
   * 라이더 이동 완료      
-  배달이 완료되면 주문 시스템에 주문 업데이트 API 요청을 합니다.   
+  배달이 완료되면 주문 시스템에 주문 업데이트 API 요청을 합니다. 
+    
   ![Rider_완료](https://raw.githubusercontent.com/smpark1020/tistory/master/image/%EA%B3%BC%EC%A0%9C/Rider_%EC%99%84%EB%A3%8C.PNG)
   ```
   2021-08-04 17:01:28.323  INFO 10160 --- [   scheduling-1] c.s.r.b.job.DeliveryJobConfiguration     : 
@@ -261,8 +263,10 @@ Spring Batch와 Quartz를 사용하여 구현했습니다.
 10초마다 READY 상태인 배달 주문이 있고, 배달 가능한 라이더가 있을 경우 PICKUP합니다.   
 PICKUP할 때 주문 시스템에 주문 업데이트 API 요청을 합니다.
   * 배달 주문 대기중   
+
   ![Rider_배달대기](https://raw.githubusercontent.com/smpark1020/tistory/master/image/%EA%B3%BC%EC%A0%9C/Rider_%EB%B0%B0%EB%8B%AC%EB%8C%80%EA%B8%B0.PNG)   
   * 배달 주문 픽업   
+
   ![Rider_픽업](https://raw.githubusercontent.com/smpark1020/tistory/master/image/%EA%B3%BC%EC%A0%9C/Rider_%ED%94%BD%EC%97%85.PNG)     
   ```
   === 주문 픽업 ===
@@ -297,6 +301,7 @@ http://localhost:8081/docs/index.html
   * **id**, **주문 번호(orderNo)**, **총 주문 금액(totalPrice)**, **라이더코드(riderCode)**, **라이더명(riderName)**, **배달 수단(deliveryMethod)**, **이동 속도(speed)**, **총 배달 거리(totalDistance)**, **남은 배달 거리(remainDistance)**, **배달 상태(deliveryStatus)**, **라이더(Rider rider)** 를 갖고 있습니다.
   * 라이더 이동 배치 기능 및 배달 조회 API에서 **라이더(Rider)** 엔티티 join 없이 **배달(Delivery)** 엔티티만 조회해도 구현되게 하기 위해 필요한 라이더 정보를 갖게 하였습니다.   
     * 해당 데이터들은 라이더가 주문을 픽업할 때 생성됩니다. (배달 상태가 READY 상태일 때는 데이터가 없습니다.)   
+
     ![Rider_배달대기](https://raw.githubusercontent.com/smpark1020/tistory/master/image/%EA%B3%BC%EC%A0%9C/Rider_%EB%B0%B0%EB%8B%AC%EB%8C%80%EA%B8%B0.PNG)   
   * **남은 배달 거리(remainDistance)** 가 0이 되면 주문 시스템으로 주문 업데이트(COMPLETE) 요청을 합니다. 
   * **배달 상태(deliveryStatus)** 는 Enum 클래스로 생성했습니다. (READY, PICKUP, COMPLETE)
@@ -325,27 +330,28 @@ http://localhost:8081/docs/index.html
 
 ## 로그 확인 방법
 로그는 프로젝트 폴더 내에 log/app.log에 저장됩니다.   
+![로그파일경로]()
 * 라이더 이동 로그   
 아래와 같은 형식으로 라이더 이동 로그를 출력합니다.
 ```
-2021-08-04 17:01:06.608  INFO 10160 --- [   scheduling-1] c.s.r.b.job.DeliveryJobConfiguration     : 
+2021-08-04 22:12:39.967 [scheduling-1] INFO  c.s.r.b.job.DeliveryJobConfiguration - 
 
 === 라이더 이동 ===
 * 라이더코드: RIDER_A01
 * 라이더명: 임꺽정
-* 주문번호: ORD_A05
-* 남은배송거리: 400
+* 주문번호: ORD_A01
+* 남은배송거리: 200
 ```
 
 * 배달 완료 로그   
 아래와 같은 형식으로 배달 완료 로그를 출력합니다.
 ```
-2021-08-04 17:01:28.575  INFO 10160 --- [   scheduling-1] c.s.r.b.job.DeliveryJobConfiguration     : 
+2021-08-04 22:13:02.616 [scheduling-1] INFO  c.s.r.b.job.DeliveryJobConfiguration - 
 
 === 배달 완료 요청 ===
-* 주문번호: ORD_A05
+* 주문번호: ORD_A01
 * 요청 데이터: {"orderStatus":"COMPLETE"}
-* 응답 데이터: {"status":"200","message":"OK","responseDate":"20210804170128","data":{"orderNo":"ORD_A05","acceptTime":"20210804170029","orderStatus":"COMPLETE"}}
+* 응답 데이터: {"status":"200","message":"OK","responseDate":"20210804221302","data":{"orderNo":"ORD_A01","acceptTime":null,"orderStatus":"COMPLETE"}}
 ```
 
 ## 실행 방법
