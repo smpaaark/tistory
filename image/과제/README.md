@@ -20,7 +20,8 @@
   * 외부의 주문생성 프로그램에서 주문 등록 API를 통해 주문을 발생시킵니다. 
   * 주문 등록이 성공할 경우 라이더 시스템에 배달 등록 요청을 합니다.
     * 바로 배달 가능한 라이더가 있을 경우 주문 상태는 PICKUP으로 저장됩니다.   
-    * 바로 배달 가능한 라이더가 없는 경우에는 주문 상태는 RECEIPT로 저장됩니다.   
+    * 바로 배달 가능한 라이더가 없는 경우에는 주문 상태는 RECEIPT로 저장됩니다.    
+    
     ![주문등록](https://raw.githubusercontent.com/smpark1020/tistory/master/image/%EA%B3%BC%EC%A0%9C/%EC%A3%BC%EB%AC%B8%EB%93%B1%EB%A1%9D.PNG)   
   * 라이더 시스템의 배달 등록까지 성공한 경우에만 주문 등록이 성공합니다.
 * 주문 업데이트(PICKUP, COMPLETE) - 라이더시스템이 호출
