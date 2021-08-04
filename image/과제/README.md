@@ -21,8 +21,7 @@
   * 주문 등록이 성공할 경우 라이더 시스템에 배달 등록 요청을 합니다.
     * 바로 배달 가능한 라이더가 있을 경우 주문 상태는 PICKUP으로 저장됩니다.   
     * 바로 배달 가능한 라이더가 없는 경우에는 주문 상태는 RECEIPT로 저장됩니다.   
-
-![주문등록](https://raw.githubusercontent.com/smpark1020/tistory/master/image/%EA%B3%BC%EC%A0%9C/%EC%A3%BC%EB%AC%B8%EB%93%B1%EB%A1%9D.PNG)   
+    ![주문등록](https://raw.githubusercontent.com/smpark1020/tistory/master/image/%EA%B3%BC%EC%A0%9C/%EC%A3%BC%EB%AC%B8%EB%93%B1%EB%A1%9D.PNG)   
   * 라이더 시스템의 배달 등록까지 성공한 경우에만 주문 등록이 성공합니다.
 * 주문 업데이트(PICKUP, COMPLETE) - 라이더시스템이 호출
   * 라이더 시스템이 RECEIPT 상태인 주문을 PICKUP으로 변경 요청
@@ -30,11 +29,12 @@
 * 주문 조회
 
 ### API 문서 접속 정보
-http://localhost:8080/docs/index.html
+주문 시스템 실행 후 접속해야 합니다.   
+http://localhost:8080/docs/index.html   
+![주문API](https://raw.githubusercontent.com/smpark1020/tistory/master/image/%EA%B3%BC%EC%A0%9C/%EC%A3%BC%EB%AC%B8API.PNG)
 
 ## 설계
-### 엔티티 설계   
-
+### 엔티티 설계
 ![Order_엔티티](https://raw.githubusercontent.com/smpark1020/tistory/master/image/%EA%B3%BC%EC%A0%9C/Ordrer_%EC%97%94%ED%8B%B0%ED%8B%B0.PNG)   
 하나의 주문은 여러개의 메뉴를 가질 수 있으므로 메뉴와 주문은 다대다 관계입니다.   
 주문메뉴라는 엔티티를 추가해서 다대다 관계를 일대다, 다대일 관계로 풀어냈습니다. 
@@ -150,7 +150,7 @@ http://localhost:8080/docs/index.html
   * 메뉴판에 존재하지 않는 메뉴가 있을 경우
   * 메뉴의 재고 수량이 부족할 경우
   * 배달 거리가 200~600내의 100 단위로 입력되지 않은 경우
-  * 요청 예시   
+  * 요청 예시
   ```
   {
       "orderNo": "ORD_A010101",
@@ -226,9 +226,10 @@ Spring Batch와 Quartz를 사용하여 구현했습니다.
 * 라이더 이동   
 10초마다 라이더를 이동 시킵니다.   
   * 라이더 배달 진행중   
-
   ![Rider_완료전](https://raw.githubusercontent.com/smpark1020/tistory/master/image/%EA%B3%BC%EC%A0%9C/Rider_%EC%99%84%EB%A3%8C%EC%A0%84.PNG)    
   ```
+  2021-08-04 17:01:06.608  INFO 10160 --- [   scheduling-1] c.s.r.b.job.DeliveryJobConfiguration     : 
+
   === 라이더 이동 ===
   * 라이더코드: RIDER_A01
   * 라이더명: 임꺽정
@@ -237,7 +238,6 @@ Spring Batch와 Quartz를 사용하여 구현했습니다.
   ```
   * 라이더 이동 완료      
   배달이 완료되면 주문 시스템에 주문 업데이트 API 요청을 합니다.   
-
   ![Rider_완료](https://raw.githubusercontent.com/smpark1020/tistory/master/image/%EA%B3%BC%EC%A0%9C/Rider_%EC%99%84%EB%A3%8C.PNG)
   ```
   2021-08-04 17:01:28.323  INFO 10160 --- [   scheduling-1] c.s.r.b.job.DeliveryJobConfiguration     : 
@@ -260,10 +260,8 @@ Spring Batch와 Quartz를 사용하여 구현했습니다.
 10초마다 READY 상태인 배달 주문이 있고, 배달 가능한 라이더가 있을 경우 PICKUP합니다.   
 PICKUP할 때 주문 시스템에 주문 업데이트 API 요청을 합니다.
   * 배달 주문 대기중   
-
   ![Rider_배달대기](https://raw.githubusercontent.com/smpark1020/tistory/master/image/%EA%B3%BC%EC%A0%9C/Rider_%EB%B0%B0%EB%8B%AC%EB%8C%80%EA%B8%B0.PNG)   
   * 배달 주문 픽업   
-  
   ![Rider_픽업](https://raw.githubusercontent.com/smpark1020/tistory/master/image/%EA%B3%BC%EC%A0%9C/Rider_%ED%94%BD%EC%97%85.PNG)     
   ```
   === 주문 픽업 ===
@@ -281,7 +279,9 @@ PICKUP할 때 주문 시스템에 주문 업데이트 API 요청을 합니다.
   ```
 
 ### API 문서 접속 정보
-http://localhost:8081/docs/index.html
+라이더 시스템 실행 후 접속해야 합니다.   
+http://localhost:8081/docs/index.html    
+![라이더API](https://raw.githubusercontent.com/smpark1020/tistory/master/image/%EA%B3%BC%EC%A0%9C/%EB%9D%BC%EC%9D%B4%EB%8D%94API.PNG)
 
 ## 설계
 ### 엔티티 설계
@@ -296,7 +296,6 @@ http://localhost:8081/docs/index.html
   * **id**, **주문 번호(orderNo)**, **총 주문 금액(totalPrice)**, **라이더코드(riderCode)**, **라이더명(riderName)**, **배달 수단(deliveryMethod)**, **이동 속도(speed)**, **총 배달 거리(totalDistance)**, **남은 배달 거리(remainDistance)**, **배달 상태(deliveryStatus)**, **라이더(Rider rider)** 를 갖고 있습니다.
   * 라이더 이동 배치 기능 및 배달 조회 API에서 **라이더(Rider)** 엔티티 join 없이 **배달(Delivery)** 엔티티만 조회해도 구현되게 하기 위해 필요한 라이더 정보를 갖게 하였습니다.   
     * 해당 데이터들은 라이더가 주문을 픽업할 때 생성됩니다. (배달 상태가 READY 상태일 때는 데이터가 없습니다.)   
-    
     ![Rider_배달대기](https://raw.githubusercontent.com/smpark1020/tistory/master/image/%EA%B3%BC%EC%A0%9C/Rider_%EB%B0%B0%EB%8B%AC%EB%8C%80%EA%B8%B0.PNG)   
   * **남은 배달 거리(remainDistance)** 가 0이 되면 주문 시스템으로 주문 업데이트(COMPLETE) 요청을 합니다. 
   * **배달 상태(deliveryStatus)** 는 Enum 클래스로 생성했습니다. (READY, PICKUP, COMPLETE)
@@ -324,7 +323,7 @@ http://localhost:8081/docs/index.html
   * 그러므로 **Delivery.rider** 를 **DELIVERY.RIDER_ID** 외래 키와 매핑했습니다.
 
 ## 로그 확인 방법
-로그는 프로젝트 폴더 내에 log/app.log 에 저장됩니다.   
+로그는 프로젝트 폴더 내에 log 폴더에 저장됩니다.   
 * 라이더 이동 로그   
 아래와 같은 형식으로 라이더 이동 로그를 출력합니다.
 ```
@@ -479,5 +478,5 @@ SELECT @@global.time_zone, @@session.time_zone, @@time_zone;
   ![애플리케이션_실행3](https://raw.githubusercontent.com/smpark1020/tistory/master/image/%EA%B3%BC%EC%A0%9C/%EC%95%A0%ED%94%8C%EB%A6%AC%EC%BC%80%EC%9D%B4%EC%85%98_%EC%8B%A4%ED%96%893.PNG)      
 
   * Mac/Linux   
-
+  
   ![애플리케이션_실행4](https://raw.githubusercontent.com/smpark1020/tistory/master/image/%EA%B3%BC%EC%A0%9C/%EC%95%A0%ED%94%8C%EB%A6%AC%EC%BC%80%EC%9D%B4%EC%85%98_%EC%8B%A4%ED%96%894.PNG)
