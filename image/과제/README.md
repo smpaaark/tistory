@@ -324,7 +324,7 @@ http://localhost:8081/docs/index.html
   * 그러므로 **Delivery.rider** 를 **DELIVERY.RIDER_ID** 외래 키와 매핑했습니다.
 
 ## 로그 확인 방법
-로그는 프로젝트 폴더 내에 log 폴더에 저장됩니다.   
+로그는 프로젝트 폴더 내에 log/app.log에 저장됩니다.   
 * 라이더 이동 로그   
 아래와 같은 형식으로 라이더 이동 로그를 출력합니다.
 ```
