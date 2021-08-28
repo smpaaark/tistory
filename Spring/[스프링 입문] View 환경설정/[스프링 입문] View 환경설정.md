@@ -15,11 +15,11 @@ Hello
 </html>
 ```
 (static/index.html)   
-![2]()   
+![2](https://raw.githubusercontent.com/smpark1020/tistory/master/Spring/%5B%EC%8A%A4%ED%94%84%EB%A7%81%20%EC%9E%85%EB%AC%B8%5D%20View%20%ED%99%98%EA%B2%BD%EC%84%A4%EC%A0%95/2.PNG)   
 (localhost:8080으로 접속하면 위의 html 내용이 표시됩니다.)
 
 ## 동작 환경
-![1]()   
+![1](https://raw.githubusercontent.com/smpark1020/tistory/master/Spring/%5B%EC%8A%A4%ED%94%84%EB%A7%81%20%EC%9E%85%EB%AC%B8%5D%20View%20%ED%99%98%EA%B2%BD%EC%84%A4%EC%A0%95/1.PNG)   
 * 컨트롤러에서 리턴 값으로 문자를 반환하면 뷰 리졸버(```viewResolver```)가 화면을 찾아서 처리합니다.
   * 스프링 부트 템플릿엔진 기본 viewName 매핑
   * ```resources:templates/``` + {ViewName} + ```.html```
@@ -58,7 +58,7 @@ public class HelloController {
 ```
 (resources/templates/hello.html 코드)
 
-![3]()   
+![3](https://raw.githubusercontent.com/smpark1020/tistory/master/Spring/%5B%EC%8A%A4%ED%94%84%EB%A7%81%20%EC%9E%85%EB%AC%B8%5D%20View%20%ED%99%98%EA%B2%BD%EC%84%A4%EC%A0%95/3.PNG)   
 (/hello로 접속하면 위의 html 내용이 화면에 표시됩니다.)
 
 ### 참고
