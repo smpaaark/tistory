@@ -1,28 +1,48 @@
-* 서버에서 무언가를 하는 거 없이 그냥 파일을 그대로 웹 브라우저에 내려주는 것입니다.
-* resources/static/ 경로의 파일들이 정적 컨텐츠 파일입니다.
-  * ex) Welcome Page
+* MVC: Model, View, Controller
+
 ```
-<!DOCTYPE HTML>
-<html>
-<head>
-    <title>static content</title>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-</head>
+package hello.hellospring.controller;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestParam;
+
+@Controller
+public class HelloController {
+
+    @GetMapping("hello")
+    public String hello(Model model) {
+        model.addAttribute("data", "spring!!");
+
+        return "hello";
+    }
+
+    @GetMapping("hello-mvc")
+    public String helloMvc(@RequestParam("name") String name, Model model) {
+        model.addAttribute("name", name);
+        return "hello-template";
+    }
+
+}
+```
+(HelloController.java)
+
+```
+<html xmlns:th="http://www.thymeleaf.org">
 <body>
-정적 컨텐츠 입니다.
+<p th:text="'hello ' + ${name}">hello! empty</p>
 </body>
 </html>
 ```
-(hello-static.html)
+(resources/templates/hello-template.html)   
+(p 태그 안의 문자열은 서버 구동 없이 직접 파일만 실행할 때 표시되는 문자열입니다.)
 
-![2](https://raw.githubusercontent.com/smpark1020/tistory/master/Spring/%5B%EC%8A%A4%ED%94%84%EB%A7%81%20%EC%9E%85%EB%AC%B8%5D%20%EC%A0%95%EC%A0%81%20%EC%BB%A8%ED%85%90%EC%B8%A0/2.PNG)   
-(resources/static/hello-static.html)
-
-![3](https://raw.githubusercontent.com/smpark1020/tistory/master/Spring/%5B%EC%8A%A4%ED%94%84%EB%A7%81%20%EC%9E%85%EB%AC%B8%5D%20%EC%A0%95%EC%A0%81%20%EC%BB%A8%ED%85%90%EC%B8%A0/3.PNG)   
+![2]()   
 (접속 화면)
 
-![1](https://raw.githubusercontent.com/smpark1020/tistory/master/Spring/%5B%EC%8A%A4%ED%94%84%EB%A7%81%20%EC%9E%85%EB%AC%B8%5D%20%EC%A0%95%EC%A0%81%20%EC%BB%A8%ED%85%90%EC%B8%A0/1.PNG)   
-(해당하는 컨트롤러가 없으면 정적 컨텐츠에서 파일을 찾아서 브라우저에 전달합니다.)
+## MVC, 템플릿 엔진 이미지
+![1]()
 
 ## 참조
 * [스프링 입문-코드로 배우는 스프링 부트, 웹 MVC, DB 접근 기술](https://www.inflearn.com/course/%EC%8A%A4%ED%94%84%EB%A7%81-%EC%9E%85%EB%AC%B8-%EC%8A%A4%ED%94%84%EB%A7%81%EB%B6%80%ED%8A%B8/dashboard)
