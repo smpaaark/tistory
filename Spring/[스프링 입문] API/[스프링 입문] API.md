@@ -1,4 +1,4 @@
-## @ResponseBody 문자 변환
+## \@ResponseBody 문자 변환
 * ```@ResponseBody```를 사용하면 뷰 리졸버(```viewResolver```)를 사용하지 않습니다.
 * 대신에 HTTP의 BODY에 문자 내용을 직접 반환(HTML BODY TAG를 말하는 것이 아닙니다.)
 ```
@@ -25,10 +25,10 @@ public class HelloController {
 ```
 (HelloController.java)
 
-![2]()   
+![2](https://raw.githubusercontent.com/smpark1020/tistory/master/Spring/%5B%EC%8A%A4%ED%94%84%EB%A7%81%20%EC%9E%85%EB%AC%B8%5D%20API/2.PNG)   
 (문자열 그대로 리턴됩니다.)
 
-## @ResponseBody 객체 변환
+## \@ResponseBody 객체 변환
 * ```@ResponseBody```를 사용하고, 객체를 반환하면 객체가 JSON으로 변환됩니다.
 ```
 package hello.hellospring.controller;
@@ -69,12 +69,12 @@ public class HelloController {
 ```
 (HelloController.java)
 
-![3]()
+![3](https://raw.githubusercontent.com/smpark1020/tistory/master/Spring/%5B%EC%8A%A4%ED%94%84%EB%A7%81%20%EC%9E%85%EB%AC%B8%5D%20API/3.PNG)   
 (JSON 형태로 리턴합니다.)
 * {key:value}로 이루어진 구조입니다.
 
-## @ResponseBody 사용 원리
-![1]()   
+## \@ResponseBody 사용 원리
+![1](https://raw.githubusercontent.com/smpark1020/tistory/master/Spring/%5B%EC%8A%A4%ED%94%84%EB%A7%81%20%EC%9E%85%EB%AC%B8%5D%20API/1.PNG)   
 * ```@ResponseBody```를 사용
   * HTTP의 BODY에 문자 내용을 직접 반환
   * ```viewResolver``` 대신에 ```HttpMessageConverter```가 동작
