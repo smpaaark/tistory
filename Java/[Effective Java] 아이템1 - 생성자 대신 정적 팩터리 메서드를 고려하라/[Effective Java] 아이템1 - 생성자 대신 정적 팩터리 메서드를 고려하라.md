@@ -26,11 +26,11 @@ public static Boolean valueOf(boolean b) {
 5. ```정적 팩터리 메서드를 작성하는 시점에는 반환할 객체의 클래스가 존재하지 않아도 됩니다.```
   * 이러한 유연함은 서비스 제공자 프레임워크(service provider framework)를 만드는 근간이 됩니다.
   * 서비스 제공자 프레임워크는 3개의 핵심 컴포넌트로 이뤄집니다.
-    * 서비스 인터페이스(service interface): 구현체의 동작을 정의
-    * 제공자 등록 API(provider registration API): 제공자가 구현체를 등록할 때 사용
-    * 서비스 접근 API(service access API): 클라이언트가 서비스의 인스턴스를 얻을 때 사용
+     * 서비스 인터페이스(service interface): 구현체의 동작을 정의
+     * 제공자 등록 API(provider registration API): 제공자가 구현체를 등록할 때 사용
+     * 서비스 접근 API(service access API): 클라이언트가 서비스의 인스턴스를 얻을 때 사용
   * 3개의 핵심 컴포넌트와 더불어 종종 서비스 제공자 인터페이스(service provider interface)라는 네 번째 컴포넌트가 쓰이기도 합니다.
-    * 서비스 인터페이스의 인스턴스를 생성하는 팩터리 객체를 설명해줍니다.
+     * 서비스 인터페이스의 인스턴스를 생성하는 팩터리 객체를 설명해줍니다.
 
 ## 정적 팩터리 메서드의 단점
 1. ```상속을 하려면 public이나 protected 생성자가 필요하니 정적 팩터리 메서드만 제공하면 하위 클래스를 만들 수 없습니다.```
@@ -58,9 +58,8 @@ public static Boolean valueOf(boolean b) {
   * 예) List<Complaint> litany = Collections.list(legacyLitany);
 
 ## 핵심 정리
-```
-정적 팩터리 메서드와 public 생성자는 각자의 쓰임새가 있으니 상대적인 장단점을 이해하고 사용하는 것이 좋습니다. 그렇다고 하더라도 정적 팩터리를 사용하는 게 유리한 경우가 더 많으므로 무작정 public 생성자를 제공하던 습관이 있다면 고쳐야 합니다.
-```
+>정적 팩터리 메서드와 public 생성자는 각자의 쓰임새가 있으니 상대적인 장단점을 이해하고 사용하는 것이 좋습니다. 그렇다고 하더라도 정적 팩터리를 사용하는 게 유리한 경우가 더 많으므로 무작정 public 생성자를 제공하던 습관이 있다면 고쳐야 합니다.
+
 
 ## 참조
 * [Effective Java 3판](http://www.kyobobook.co.kr/product/detailViewKor.laf?mallGb=KOR&ejkGb=KOR&barcode=9788966262281)
