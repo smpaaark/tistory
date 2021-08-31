@@ -3,7 +3,7 @@
 
 ## 싱글턴을 만드는 방식
 보통 두 가지 방식을 사용하는데 두 방식 모두 생성자는 private으로 감춰두고, 유일한 인스턴스에 접근할 수 있는 수단으로 public static 멤버를 하나 마련해둡니다.
-1. public static 멤버가 final 필드인 방식
+**1. public static 멤버가 final 필드인 방식**
 ```
 package com.smpaaark.item3.field;
 
@@ -31,7 +31,7 @@ public class Elvis {
 * private 생성자는 public static final 필드인 Elvis.INSTANCE를 초기화할 때 딱 한번만 호출됩니다.
 * 예외는 단 한가지, 권한이 있는 클라이언트는 리플렉션 API인 AccessibleObject.setAccessible을 사용해 private 생성자를 호출할 수 있습니다.
 
-2. 정적 팩터리 메서드를 public static 멤버로 제공하는 방식
+**2. 정적 팩터리 메서드를 public static 멤버로 제공하는 방식**
 ```
 package com.smpaaark.item3.staticfactory;
 
@@ -80,7 +80,7 @@ private Object readResolve() {
 }
 ```
 
-3. 원소가 하나인 열거 타입을 선언하는 방식
+**3. 원소가 하나인 열거 타입을 선언하는 방식**
 ```
 package com.smpaaark.item3.enumtype;
 
