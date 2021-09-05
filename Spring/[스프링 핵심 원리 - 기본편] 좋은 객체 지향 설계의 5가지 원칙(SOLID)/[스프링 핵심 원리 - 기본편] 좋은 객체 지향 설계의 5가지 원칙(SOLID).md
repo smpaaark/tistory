@@ -22,7 +22,7 @@ Open/closed principle
 * 인터페이스를 구현한 새로운 클래스를 하나 만들어서 새로운 기능을 구현
 * 역할과 구현의 분리를 생각해봅니다.
 
-![1]()   
+![1](https://raw.githubusercontent.com/smpark1020/tistory/master/Spring/%5B%EC%8A%A4%ED%94%84%EB%A7%81%20%ED%95%B5%EC%8B%AC%20%EC%9B%90%EB%A6%AC%20-%20%EA%B8%B0%EB%B3%B8%ED%8E%B8%5D%20%EC%A2%8B%EC%9D%80%20%EA%B0%9D%EC%B2%B4%20%EC%A7%80%ED%96%A5%20%EC%84%A4%EA%B3%84%EC%9D%98%205%EA%B0%80%EC%A7%80%20%EC%9B%90%EC%B9%99(SOLID)/1.PNG)   
 
 ### 문제점
 * MemberService 클라이언트가 구현 클래스를 직접 선택
@@ -49,7 +49,7 @@ Interface segregation principle
 
 ## DIP 의존관계 역전 원칙
 Dependency inversion principle
-* 프로그래머는 "추상화에 의존해야지, 구체화에 의존하면 안된다." 의존성 주입은 이 원칙을 따르는 방법 중 하나입니다.
+* 프로그래머는 "추상화에 의존해야지, 구체화에 의존하면 안됩니다." 의존성 주입은 이 원칙을 따르는 방법 중 하나입니다.
 * 쉽게 이야기해서 구현 클래스에 의존하지 말고, 인터페이스에 의존하라는 뜻
 * ```역할(Role)에 의존하게 해야 한다는 것과 같습니다.``` 객체 세상도 클라이언트가 인터페이스에 의존해야 유연하게 구현체를 변경할 수 있습니다. 구현체에 의존하게 되면 변경이 아주 어려워집니다.
 * 그런데 OCP에서 설명한 MemberService는 인터페이스에 의존하지만, 구현 클래스도 동시에 의존합니다.
