@@ -7,9 +7,52 @@
 > 주의: 스프링 데이터 JPA는 JPA를 편리하게 사용하도록 도와주는 기술입니다. 따라서 JPA를 먼저 학습한 후에 스프링 데이터 JPA를 학습해야 합니다.
 
 ## 스프링 데이터 JPA 회원 리포지토리
+```
+package hello.hellospring.repository;
+
+import hello.hellospring.domain.Member;
+import org.springframework.data.jpa.repository.JpaRepository;
+
+import java.util.Optional;
+
+public interface SpringDataJpaMemberRepository extends JpaRepository<Member, Long>, MemberRepository {
+
+    @Override
+    Optional<Member> findByName(String name);
+
+}
+```
+(SpringDataJpaMemberRepository.java)
 
 ## 스프링 데이터 JPA 회원 리포지토리를 사용하도록 스프링 설정 변경
+```
+package hello.hellospring;
 
+import hello.hellospring.repository.MemberRepository;
+import hello.hellospring.service.MemberService;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
+
+@Configuration
+public class SpringConfig {
+
+
+    private final MemberRepository memberRepository;
+
+    @Autowired
+    public SpringConfig(MemberRepository memberRepository) {
+        this.memberRepository = memberRepository;
+    }
+
+    @Bean
+    public MemberService memberService() {
+        return new MemberService(memberRepository);
+    }
+
+}
+```
+(SpringConfig.java)
 * 스프링 데이터 JPA가 ```SpringDataJpaMemberRepository```를 스프링 빈으로 자동 등록해줍니다.
 
 ## 스프링 데이터 JPA 제공 클래스
