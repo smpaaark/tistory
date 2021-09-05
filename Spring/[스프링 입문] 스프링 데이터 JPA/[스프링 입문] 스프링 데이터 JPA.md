@@ -56,7 +56,7 @@ public class SpringConfig {
 * 스프링 데이터 JPA가 ```SpringDataJpaMemberRepository```를 스프링 빈으로 자동 등록해줍니다.
 
 ## 스프링 데이터 JPA 제공 클래스
-![1]()
+![1](https://raw.githubusercontent.com/smpark1020/tistory/master/Spring/%5B%EC%8A%A4%ED%94%84%EB%A7%81%20%EC%9E%85%EB%AC%B8%5D%20%EC%8A%A4%ED%94%84%EB%A7%81%20%EB%8D%B0%EC%9D%B4%ED%84%B0%20JPA/1.PNG)
 
 ## 스프링 데이터 JPA 제공 기능
 * 인터페이스를 통한 기본적인 CRUD
