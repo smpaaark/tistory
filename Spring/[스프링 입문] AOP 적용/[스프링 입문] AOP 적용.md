@@ -1,7 +1,7 @@
 * AOP: Aspect Oriented Programming
 * 공통 관심 사항(cross-cutting concern) vs 핵심 관심 사항(core concern) 분리
 
-![1]()
+![1](https://raw.githubusercontent.com/smpark1020/tistory/master/Spring/%5B%EC%8A%A4%ED%94%84%EB%A7%81%20%EC%9E%85%EB%AC%B8%5D%20AOP%20%EC%A0%81%EC%9A%A9/1.PNG)
 
 ## 시간 측정 AOP 등록
 ```
@@ -42,16 +42,16 @@ public class TimeTraceAop {
 
 ## 스프링의 AOP 동작 방식 설명
 ### AOP 적용 전 의존관계   
-![2]()   
+![2](https://raw.githubusercontent.com/smpark1020/tistory/master/Spring/%5B%EC%8A%A4%ED%94%84%EB%A7%81%20%EC%9E%85%EB%AC%B8%5D%20AOP%20%EC%A0%81%EC%9A%A9/2.PNG)   
 
 ### AOP 적용 후 의존관계
-![3]()   
+![3](https://raw.githubusercontent.com/smpark1020/tistory/master/Spring/%5B%EC%8A%A4%ED%94%84%EB%A7%81%20%EC%9E%85%EB%AC%B8%5D%20AOP%20%EC%A0%81%EC%9A%A9/3.PNG)   
 
 ### AOP 적용 전 전체 그림
-![4]()   
+![4](https://raw.githubusercontent.com/smpark1020/tistory/master/Spring/%5B%EC%8A%A4%ED%94%84%EB%A7%81%20%EC%9E%85%EB%AC%B8%5D%20AOP%20%EC%A0%81%EC%9A%A9/4.PNG)   
 
 ### AOP 적용 후 전체 그림
-![5]()   
+![5](https://raw.githubusercontent.com/smpark1020/tistory/master/Spring/%5B%EC%8A%A4%ED%94%84%EB%A7%81%20%EC%9E%85%EB%AC%B8%5D%20AOP%20%EC%A0%81%EC%9A%A9/5.PNG)   
 
 ## 참조
 * [스프링 입문-코드로 배우는 스프링 부트, 웹 MVC, DB 접근 기술](https://www.inflearn.com/course/%EC%8A%A4%ED%94%84%EB%A7%81-%EC%9E%85%EB%AC%B8-%EC%8A%A4%ED%94%84%EB%A7%81%EB%B6%80%ED%8A%B8/dashboard)
