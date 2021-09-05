@@ -2,7 +2,7 @@
 * 공통 관심 사항(cross-cutting concern) vs 핵심 관심 사항(core concern)
 * 회원 가입 시간, 회원 조회 시간 측정
 
-![1]()   
+![1](https://raw.githubusercontent.com/smpark1020/tistory/master/Spring/%5B%EC%8A%A4%ED%94%84%EB%A7%81%20%EC%9E%85%EB%AC%B8%5D%20AOP%EA%B0%80%20%ED%95%84%EC%9A%94%ED%95%9C%20%EC%83%81%ED%99%A9/1.PNG)   
 
 ## MemberService 회원 조회 시간 측정 추가
 ```
