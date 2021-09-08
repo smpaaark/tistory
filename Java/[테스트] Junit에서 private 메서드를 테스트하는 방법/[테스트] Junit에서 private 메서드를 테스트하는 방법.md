@@ -32,7 +32,7 @@ public class BranchChannelId implements Serializable {
 * channelCode 값에 따라 특정 int 값을 반환하는 private 메서드입니다.
 
 ## 실패하는 테스트 코드
-![1]()   
+![1](https://raw.githubusercontent.com/smpark1020/tistory/master/Java/%5B%ED%85%8C%EC%8A%A4%ED%8A%B8%5D%20Junit%EC%97%90%EC%84%9C%20private%20%EB%A9%94%EC%84%9C%EB%93%9C%EB%A5%BC%20%ED%85%8C%EC%8A%A4%ED%8A%B8%ED%95%98%EB%8A%94%20%EB%B0%A9%EB%B2%95/1.PNG)   
 * private 메서드에 접근할 수 없다는 메시지와 함께 컴파일 실패합니다.
 
 ## 성공하는 테스트 코드
@@ -59,7 +59,7 @@ public void getChannelSeq() throws Exception {
   * 메서드를 실행시킵니다.
 
 ### 결과
-![2]()
+![2](https://raw.githubusercontent.com/smpark1020/tistory/master/Java/%5B%ED%85%8C%EC%8A%A4%ED%8A%B8%5D%20Junit%EC%97%90%EC%84%9C%20private%20%EB%A9%94%EC%84%9C%EB%93%9C%EB%A5%BC%20%ED%85%8C%EC%8A%A4%ED%8A%B8%ED%95%98%EB%8A%94%20%EB%B0%A9%EB%B2%95/2.PNG)
 
 ## 참조
 * [[JUnit] private 메서드, 변수 테스트 방법 - Crocus](https://www.crocus.co.kr/1665)
