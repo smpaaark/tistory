@@ -1,7 +1,7 @@
 현재 AppConfig를 보면 ```중복```이 있고, ```역할```에 따른 ```구현```이 잘 안보입니다.
 
 ## 기대하는 그림
-![1]()   
+![1](https://raw.githubusercontent.com/smpark1020/tistory/master/Spring/%5B%EC%8A%A4%ED%94%84%EB%A7%81%20%ED%95%B5%EC%8B%AC%20%EC%9B%90%EB%A6%AC%20-%20%EA%B8%B0%EB%B3%B8%ED%8E%B8%5D%20AppConfig%20%EB%A6%AC%ED%8C%A9%ED%84%B0%EB%A7%81/1.PNG)   
 
 ## 리팩터링 전
 ```
