@@ -7,12 +7,12 @@
   * ```@Bean```, ```<bean>```당 각각 하나씩 메타 정보가 생성됩니다.
 * 스프링 컨테이너는 이 메타정보를 기반으로 스프링 빈을 생성합니다.   
 
-![1]()
+![1](https://raw.githubusercontent.com/smpark1020/tistory/master/Spring/%5B%EC%8A%A4%ED%94%84%EB%A7%81%20%ED%95%B5%EC%8B%AC%20%EC%9B%90%EB%A6%AC%20-%20%EA%B8%B0%EB%B3%B8%ED%8E%B8%5D%20%EC%8A%A4%ED%94%84%EB%A7%81%20%EB%B9%88%20%EC%84%A4%EC%A0%95%20%EB%A9%94%ED%83%80%20%EC%A0%95%EB%B3%B4%20-%20BeanDefinition/1.PNG)
 
-![2]()   
+![2](https://raw.githubusercontent.com/smpark1020/tistory/master/Spring/%5B%EC%8A%A4%ED%94%84%EB%A7%81%20%ED%95%B5%EC%8B%AC%20%EC%9B%90%EB%A6%AC%20-%20%EA%B8%B0%EB%B3%B8%ED%8E%B8%5D%20%EC%8A%A4%ED%94%84%EB%A7%81%20%EB%B9%88%20%EC%84%A4%EC%A0%95%20%EB%A9%94%ED%83%80%20%EC%A0%95%EB%B3%B4%20-%20BeanDefinition/2.PNG)   
 * ```AnnotationConfigApplicationContext```는 ```AnnotatedBeanDefinitionReader```를 사용해서 ```AppConfig.class```를 읽고 ```BeanDefinition```을 생성합니다.
 * ```GenericXmlApplicationContext```는 ```XmlBeanDefinitionReader```를 사용해서 ```appConfig.xml```설정 정보를 읽고 ```BeanDefinition```을 생성합니다.
-* 새로운 형식의 설정 저보가 추가되면, XxxBeanDefinitionReader를 만들어서 ```BeanDefinition```을 생성하면 됩니다.
+* 새로운 형식의 설정 정보가 추가되면, XxxBeanDefinitionReader를 만들어서 ```BeanDefinition```을 생성하면 됩니다.
 
 ## BeanDefinition 살펴보기
 ### BeanDefinition 정보
