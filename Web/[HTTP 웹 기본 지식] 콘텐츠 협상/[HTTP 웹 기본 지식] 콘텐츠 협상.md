@@ -32,5 +32,7 @@ Quality Values(q)
 * Accept: ```text/*```;q=0.3, ```text/html```;q=0.7, ```text/html;level=1```,   
 ```text/html;level=2```;q=0.4, ```*/*```;q=0.5
 
+![1](https://raw.githubusercontent.com/smpark1020/tistory/master/Web/%5BHTTP%20%EC%9B%B9%20%EA%B8%B0%EB%B3%B8%20%EC%A7%80%EC%8B%9D%5D%20%EC%BD%98%ED%85%90%EC%B8%A0%20%ED%98%91%EC%83%81/1.PNG)
+
 ## 참조
 * [모든 개발자를 위한 HTTP 웹 기본 지식](https://www.inflearn.com/course/http-%EC%9B%B9-%EB%84%A4%ED%8A%B8%EC%9B%8C%ED%81%AC/dashboard)
