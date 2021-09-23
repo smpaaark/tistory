@@ -1,0 +1,41 @@
+* From: 유저 에이전트의 이메일 정보
+* Referer: 이전 웹 페이지 주소
+* User-Agent: 유저 에이전트 애플리케이션 정보
+* Server: 요청을 처리하는 오리진 서버의 소프트웨어 정보
+* Date: 메시지가 생성된 날짜
+
+## From
+유저 에이전트의 이메일 정보
+* 일반적으로 잘 사용되지 않음
+* 검색 엔진 같은 곳에서, 주로 사용
+* 요청에서 사용
+
+## Referer
+이전 웹 페이지 주소
+* 현재 요청된 페이지의 이전 웹 페이지 주소
+* A -> B로 이동하는 경우 B를 요청할 때 Referer: A를 포함해서 요청
+* Referer를 사용해서 유입 경로 분석 가능
+* 요청에서 사용
+* 참고: referer는 단어 referrer의 오타
+
+## User-Agent
+유저 에이전트 애플리케이션 정보
+* user-agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.183 Safari/537.36
+* 클라이언트의 애플리케이션 정보(웹 브라우저 정보, 등등)
+* 통계 정보
+* 어떤 종류의 브라우저에서 장애가 발생하는지 파악 가능
+* 요청에서 사용
+
+## Server
+요청을 처리하는 ORIGIN 서버의 소프트웨어 정보
+* Server: Apache/2.2.22 (Debian)
+* server: nginx
+* 응답에서 사용
+
+## Date
+메시지가 발생한 날짜와 시간
+* Date: Tue, 15 Nov 1994 08:12:31 GMT
+* 응답에서 사용
+
+## 참조
+* [모든 개발자를 위한 HTTP 웹 기본 지식](https://www.inflearn.com/course/http-%EC%9B%B9-%EB%84%A4%ED%8A%B8%EC%9B%8C%ED%81%AC/dashboard)
