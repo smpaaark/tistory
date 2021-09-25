@@ -7,7 +7,7 @@
 
 ## 추정
 QPS(Query Per Second) 추정치
-* 일간 능동 사용자(Daily Active User, DAU) = 3억 X 50% = 1.5djr(150million)
+* 일간 능동 사용자(Daily Active User, DAU) = 3억 X 50% = 1.5억(150million)
 * QPS = 1.5억 X 2트윗/24시간/3600초 = 약 3500
 * 최대 QPS(Peek QPS) = 2 X QPS = 약 7000
 
