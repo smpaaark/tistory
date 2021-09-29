@@ -1,17 +1,18 @@
 ## 상속을 고려한 설계와 문서화
 ```상속용 클래스는 재정의할 수 있는 메서드들을 내부적으로 어떻게 이용하는지(자기사용) 문서로 남겨야 합니다.``` 재정의 가능 메서드를 호출할 수 있는 모든 상황을 문서로 남겨야 합니다. ('재정의 가능'이란 public과 protected 메서드 중 final이 아닌 모든 메서드를 뜻합니다.)
 
-API 문서의 메서드 설명 끝에서 종종 "Implementation Requirements"로 시작하는 절을 볼 수 있는데, 그 메서드의 내부 동작 방식을 설명하는 곳입니다. 이 절은 메서드 주석에 @implSpec 태그를 붙여주면 자바독 도구가 생성해줍니다. 다음은 java.util.AbstractCollection에서 발췌한 예입니다.
+API 문서의 메서드 설명 끝에서 종종 "Implementation Requirements"로 시작하는 절을 볼 수 있는데, 그 메서드의 내부 동작 방식을 설명하는 곳입니다. 이 절은 메서드 주석에 \@implSpec 태그를 붙여주면 자바독 도구가 생성해줍니다. 다음은 java.util.AbstractCollection에서 발췌한 예입니다.
 > public boolean remove(Object o)
 >
 > 주어진 원소가 이 컬렉션 안에 있다면 그 인스턴스를 하나 제거한다(선택적 동작). 더 정확하게 말하면, 이 컬렉션 안에 'Object.equals(o, e)가 참인 원소' e가 하나 이상 있다면 그 중 하나를 제거한다. 주어진 원소가 컬렉션 안에 있었다면 (즉, 호출 결과 이 컬렉션이 변경됐다면) true를 반환한다.
 > Implementation Requirements: 이 메서드는 컬렉션을 순회하며 주어진 원소를 찾도록 구현되었다. 주어진 원소를 찾으면 반복자의 remove 메서드를 사용해 컬렉션에서 제거한다. 이 컬렉션이 주어진 객체를 갖고 있으나, 이 컬렉션의 iterator 메서드가 반환한 반복자가 remove 메서드를 구현하지 않았다면 UnsupportedOperationException을 던지니 주의하자.
+
 * HashSet을 상속하여 add를 재정의한 것이 addAll에 영향을 준다는 사실을 알 수 없었는데, 아주 대조적입니다.
 
 하지만 이런 식으로 클래스를 안전하게 상속할 수 있도록 하려면 (상속만 아니었다면 기술하지 않았어야 할) 내부 구현 방식을 설명해야만 합니다.
 
-## @implSpec
-@implSpec 태그는 자바 8에서 처음 도입되어 자바 9부터 본격적으로 사용되기 시작했습니다. 이 태그가 기본값으로 활성화되어야 바람직하다고 생각하지만 자바 11의 자바독에서도 선택사항으로 남겨져 있습니다. 이 태그를 활성화화려면 명령줄 매개변수로 -tag "implSpec:a:Implementation Requirements:"를 지정해주면 됩니다.
+## \@implSpec
+\@implSpec 태그는 자바 8에서 처음 도입되어 자바 9부터 본격적으로 사용되기 시작했습니다. 이 태그가 기본값으로 활성화되어야 바람직하다고 생각하지만 자바 11의 자바독에서도 선택사항으로 남겨져 있습니다. 이 태그를 활성화화려면 명령줄 매개변수로 -tag "implSpec:a:Implementation Requirements:"를 지정해주면 됩니다.
 
 ## 훅(hook) 선별 후 protected 메서드 형태로 공개
 효율적인 하위 클래스를 큰 어려움 없이 만들 수 있게 하려면 ```클래스의 내부 동작 과정 중간에 끼어들 수 있는 훅(hook)을 잘 선별하여 protected 메서드 형태로 공개해야 할 수도 있습니다.``` java.util.AbstractList의 removeRange 메서드를 예로 살펴보겠습니다.
@@ -24,6 +25,7 @@ API 문서의 메서드 설명 끝에서 종종 "Implementation Requirements"로
 > Parameters:
 >   fromIndex 제거할 첫 원소의 인덱스
 >   toIndex   제거할 마지막 원소의 다음 인덱스
+
 * 이 메서드를 제공하는 이유는 단지 하위 클래스에서 부분리스트의 clear 메서드를 고성능으로 만들기 쉽게 하기 위해서입니다.
 
 ## 상속용 클래스를 설계할 때 어떤 메서드를 protected로 노출해야할지 결정하는 방법
