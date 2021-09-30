@@ -30,7 +30,7 @@ public void split_여러개() throws Exception {
 }
 ```
 ### 결과
-![1]()
+![1](https://raw.githubusercontent.com/smpark1020/tistory/master/Java/%5BJUnit%5D%20assertj%20%ED%99%9C%EC%9A%A9%ED%95%98%EA%B8%B0/1.PNG)
 
 ## containsExactly
 결과가 배열로 반환되는 경우 containsExactly()를 활용해 배열에 기대하는 값만 존재하는지 확인합니다.
@@ -52,7 +52,7 @@ public void split_1개() throws Exception {
 ```
 
 ### 결과
-![2]()
+![2](https://raw.githubusercontent.com/smpark1020/tistory/master/Java/%5BJUnit%5D%20assertj%20%ED%99%9C%EC%9A%A9%ED%95%98%EA%B8%B0/2.PNG)
 
 ## isEqualTo
 결과가 기대하는 값과 일치하는지 확인합니다.
@@ -74,7 +74,7 @@ public void substring() throws Exception {
 ```
 
 ### 결과
-![3]()
+![3](https://raw.githubusercontent.com/smpark1020/tistory/master/Java/%5BJUnit%5D%20assertj%20%ED%99%9C%EC%9A%A9%ED%95%98%EA%B8%B0/3.PNG)
 
 ## assertThatThrownBy
 익셉션이 발생하는 케이스를 테스트할 때 사용합니다.
@@ -100,7 +100,7 @@ public void charAt_범위_밖() throws Exception {
   * hasMessageContaining: 익셉션 메시지에 입력되는 문자열이 포함되는지 확인
 
 ### 결과
-![4]()
+![4](https://raw.githubusercontent.com/smpark1020/tistory/master/Java/%5BJUnit%5D%20assertj%20%ED%99%9C%EC%9A%A9%ED%95%98%EA%B8%B0/4.PNG)
 
 ## isTrue
 결과 값이 Ture인지 확인합니다.
@@ -128,4 +128,4 @@ public void contains_확인() throws Exception {
 ```
 
 ### 결과
-![5]()
+![5](https://raw.githubusercontent.com/smpark1020/tistory/master/Java/%5BJUnit%5D%20assertj%20%ED%99%9C%EC%9A%A9%ED%95%98%EA%B8%B0/5.PNG)

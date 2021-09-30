@@ -16,7 +16,7 @@ public void split_test() throws Exception {
     assertThat(splitArray).contains("2");
 }
 ```
-![1]()   
+![1](https://raw.githubusercontent.com/smpark1020/tistory/master/Java/%5BJUnit%5D%20JUnit%20%EA%B8%B0%EB%8A%A5%20%ED%99%9C%EC%9A%A9%ED%95%98%EA%B8%B0/1.PNG)   
 
 ### \@DisplayName를 사용한 경우
 ```
@@ -34,7 +34,7 @@ public void split_test() throws Exception {
     assertThat(splitArray).contains("2");
 }
 ```
-![2]()
+![2](https://raw.githubusercontent.com/smpark1020/tistory/master/Java/%5BJUnit%5D%20JUnit%20%EA%B8%B0%EB%8A%A5%20%ED%99%9C%EC%9A%A9%ED%95%98%EA%B8%B0/2.PNG)
 
 ## \@ParameterizedTest
 중복 코드를 제거할 때 활용됩니다.   
@@ -82,7 +82,7 @@ public void ParameterizedTest_contains_확인(int inputNum) throws Exception {
 * 입력값이 메서드 매개변수인 inputNum으로 전달됩니다.
 
 ### 결과
-![3]()   
+![3](https://raw.githubusercontent.com/smpark1020/tistory/master/Java/%5BJUnit%5D%20JUnit%20%EA%B8%B0%EB%8A%A5%20%ED%99%9C%EC%9A%A9%ED%95%98%EA%B8%B0/3.PNG)   
 
 ### 예시 코드2
 ```
@@ -104,4 +104,4 @@ public void CsvSource_contains_확인(int inputNum, boolean inputResult) throws 
 * "1, true"를 예로 들면 콤마(,)를 기준으로 inputNum에는 1이 전달되고, inputResult에는 true가 전달됩니다.
 
 ### 결과
-![4]()
+![4](https://raw.githubusercontent.com/smpark1020/tistory/master/Java/%5BJUnit%5D%20JUnit%20%EA%B8%B0%EB%8A%A5%20%ED%99%9C%EC%9A%A9%ED%95%98%EA%B8%B0/4.PNG)
