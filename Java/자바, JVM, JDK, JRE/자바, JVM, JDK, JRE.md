@@ -1,4 +1,4 @@
-![3](https://raw.githubusercontent.com/smpark1020/tistory/master/Java/%EC%9E%90%EB%B0%94%2C%20JVM%2C%20JDK%2C%20JRE/3.jpg)
+![3](https://raw.githubusercontent.com/smpark1020/tistory/master/Java/%EC%9E%90%EB%B0%94%2C%20JVM%2C%20JDK%2C%20JRE/3.PNG)
 
 ## JVM(Java Virtual Machine)
 * 자바 가상 머신으로 자바 바이트 코드(.class 파일)를 OS에 특화된 코드로 변환(인터프리터와 JIT 컴파일러)하여 실행합니다.
@@ -31,6 +31,12 @@ java HelloJava
 
 ## 자바
 * 프로그래밍 언어
+* JDK에 들어있는 자바 컴파일러(javac)를 사용하여 바이트코드(.class 파일)로 컴파일 할 수 있습니다.
+* 오라클에서 만든 Oracle JDK 11 버전부터 상용으로 사용할 때 유료.
+  * 오라클에서 만든 Oracle Open JDK는 무료.
+  * 오라클에서 만들지 않은 Open JDK는 무료.
+  * 사실상 무료
+
 ```
 public class HelloJava {
     
@@ -39,11 +45,7 @@ public class HelloJava {
     }
 }
 ```
-* JDK에 들어있는 자바 컴파일러(javac)를 사용하여 바이트코드(.class 파일)로 컴파일 할 수 있습니다.
-* 오라클에서 만든 Oracle JDK 11 버전부터 상용으로 사용할 때 유료.
-  * 오라클에서 만든 Oracle Open JDK는 무료.
-  * 오라클에서 만들지 않은 Open JDK는 무료.
-  * 사실상 무료
+(Java 코드 예시)
 
 ## JVM 언어
 * JVM 기반으로 동작하는 프로그래밍 언어

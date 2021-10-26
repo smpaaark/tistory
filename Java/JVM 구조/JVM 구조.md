@@ -1,4 +1,4 @@
-![5](https://raw.githubusercontent.com/smpark1020/tistory/master/Java/JVM%20%EA%B5%AC%EC%A1%B0/5.jpg)
+![5](https://raw.githubusercontent.com/smpark1020/tistory/master/Java/JVM%20%EA%B5%AC%EC%A1%B0/5.PNG)
 
 ## 클래스 로더 시스템
 * .class에서 바이트코드를 읽고 메모리에 저장
@@ -18,7 +18,6 @@ public class App {
 }
 ```
 (static 변수 선언)
-
 ```
 public class Smpaaark {
 
@@ -41,6 +40,12 @@ public class Smpaaark {
 * 메소드 영역에는 클래스 수준의 정보 (클래스 이름, 부모 클래스 이름, 메소드, 변수) 저장. 공유 자원입니다.
   * 클래스 이름은 풀 패키지 경로로 저장합니다.
   * 모든 클래스는 상속받은 클래스가 있습니다. (= Object)
+* 힙 영역에는 객체를 저장. 공유 자원입니다.
+* 스택 영역에는 쓰레드마다 런타임 스택을 만들고, 그 안에 메소드 호출을 스택 프레임이라 부르는 블럭으로 쌓습니다. 쓰레드 종료하면 런타임 스택도 사라집니다.
+  * 콘솔에 찍히는 에러 메시지에 메서드가 쌓여있는데 이게 메서드 호출 스택이 쌓여있는 것입니다.
+* PC(Program Counter) 레지스터: 쓰레드 마다 쓰레드 내 현재 실행할 instruction의 위치를 가리키는 포인터가 생성됩니다.
+* 네이티브 메소드 스택
+
 ```
 public class App {
 
@@ -65,15 +70,9 @@ public class App {
 }
 ```
 (이런 변수 정보들도 저장됩니다.)
-* 힙 영역에는 객체를 저장. 공유 자원입니다.
-* 스택 영역에는 쓰레드마다 런타임 스택을 만들고, 그 안에 메소드 호출을 스택 프레임이라 부르는 블럭으로 쌓습니다. 쓰레드 종료하면 런타임 스택도 사라집니다.
-  * 콘솔에 찍히는 에러 메시지에 메서드가 쌓여있는데 이게 메서드 호출 스택이 쌓여있는 것입니다.
 
 ![4](https://raw.githubusercontent.com/smpark1020/tistory/master/Java/JVM%20%EA%B5%AC%EC%A1%B0/4.PNG)
-(콘솔 에러 메시지)
-
-* PC(Program Counter) 레지스터: 쓰레드 마다 쓰레드 내 현재 실행할 instruction의 위치를 가리키는 포인터가 생성됩니다.
-* 네이티브 메소드 스택
+(스택 - 콘솔 에러 메시지)
 
 ## 실행 엔진
 * 인터프리터: 바이트코드를 한줄 씩 실행.
