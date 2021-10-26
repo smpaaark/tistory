@@ -1,3 +1,5 @@
+![5](https://raw.githubusercontent.com/smpark1020/tistory/master/Java/JVM%20%EA%B5%AC%EC%A1%B0/5.jpg)
+
 ## 클래스 로더 시스템
 * .class에서 바이트코드를 읽고 메모리에 저장
 * 로딩: 클래스 읽어오는 과정
@@ -28,11 +30,11 @@ public class Smpaaark {
 (위에 선언한 static 변수를 다른 클래스에서 사용)
 * 클래스명.static변수명 형태로 사용합니다.
 
-![1]()   
+![1](https://raw.githubusercontent.com/smpark1020/tistory/master/Java/JVM%20%EA%B5%AC%EC%A1%B0/1.PNG)   
 (인텔리J를 통해 본 class 파일)
 * 원래는 바이트코드 형태이지만 IDE에서 우리가 이해할 수 있을 수준으로 디컴파일해서 보여줍니다.
 
-![2]()
+![2](https://raw.githubusercontent.com/smpark1020/tistory/master/Java/JVM%20%EA%B5%AC%EC%A1%B0/2.PNG)
 (실제 바이트코드)
 
 ## 메모리
@@ -49,7 +51,7 @@ public class App {
 	}
 }
 ```
-![3]()   
+![3](https://raw.githubusercontent.com/smpark1020/tistory/master/Java/JVM%20%EA%B5%AC%EC%A1%B0/3.PNG)   
 (App 클래스는 코드상으로 아무 클래스도 상속받지 않았지만 상위 클래스를 출력하면 Object 클래스가 출력됩니다.)
 
 ```
@@ -67,7 +69,7 @@ public class App {
 * 스택 영역에는 쓰레드마다 런타임 스택을 만들고, 그 안에 메소드 호출을 스택 프레임이라 부르는 블럭으로 쌓습니다. 쓰레드 종료하면 런타임 스택도 사라집니다.
   * 콘솔에 찍히는 에러 메시지에 메서드가 쌓여있는데 이게 메서드 호출 스택이 쌓여있는 것입니다.
 
-![4]()
+![4](https://raw.githubusercontent.com/smpark1020/tistory/master/Java/JVM%20%EA%B5%AC%EC%A1%B0/4.PNG)
 (콘솔 에러 메시지)
 
 * PC(Program Counter) 레지스터: 쓰레드 마다 쓰레드 내 현재 실행할 instruction의 위치를 가리키는 포인터가 생성됩니다.
@@ -92,4 +94,4 @@ public static native Thread currentThread();
 * C, C++로 작성 된 라이브러리
 
 ## 참조
-* [더 자바, 코드를 조작하는 다양한 방법]()
+* [더 자바, 코드를 조작하는 다양한 방법](https://www.inflearn.com/course/the-java-code-manipulation/dashboard)
