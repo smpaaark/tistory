@@ -24,7 +24,7 @@ public class Masulsa {
 }
 ```
 
-![1]()
+![1](https://raw.githubusercontent.com/smpark1020/tistory/master/Java/javaagent%20%EC%82%AC%EC%9A%A9%ED%95%B4%EB%B3%B4%EA%B8%B0/1.PNG)
 * 다음과 같이 바이트코드 조작 코드와 출력 코드를 같이 사용하게 되면 "Rabbit!"이 출력되지 않습니다.
 * 이미 바이트코드 조작 코드가 실행되기 전에 Moja 클래스를 읽었기 때문입니다.
 
@@ -62,7 +62,7 @@ public class Masulsa {
 * 출력 코드 전까지 Moja 클래스를 직접 읽지 않아도 됩니다.
 * 그러므로 class 파일이 변경 된 후 Moja 클래스를 읽어옵니다.
 
-![2]()
+![2](https://raw.githubusercontent.com/smpark1020/tistory/master/Java/javaagent%20%EC%82%AC%EC%9A%A9%ED%95%B4%EB%B3%B4%EA%B8%B0/2.PNG)
 * 따라서 한번에 "Rabbit!"이 출력됩니다.
 * 하지만 다른 코드에서 Moja 클래스를 먼저 읽을 경우 위 코드가 의도대로 작동하지 않을 수 있습니다.
 
@@ -85,7 +85,7 @@ public class Masulsa {
 이제부터 위 코드만 실행해도 "Rabbit!"이 출력되도록 해보겠습니다.
 
 ### 새 프로젝트 생성
-![3]()
+![3](https://raw.githubusercontent.com/smpark1020/tistory/master/Java/javaagent%20%EC%82%AC%EC%9A%A9%ED%95%B4%EB%B3%B4%EA%B8%B0/3.PNG)
 * 별도의 메이븐 프로젝트를 하나 생성합니다.
 
 ### 의존성 추가
@@ -179,10 +179,14 @@ public class MasulsaAgent {
     </plugins>
 </build>
 ```
-* <Premain-Class>me.whiteship.MasulsaAgent</Premain-Class>
+```
+<Premain-Class>me.whiteship.MasulsaAgent</Premain-Class>
+```
   * premain 방식 적용
-* <Can-Redefine-Classes>true</Can-Redefine-Classes>
+```
+<Can-Redefine-Classes>true</Can-Redefine-Classes>
 <Can-Retransform-Classes>true</Can-Retransform-Classes>
+```
   * 클래스를 바꾸는 작업이기 때문에 위 값들을 true로 추가해줘야 합니다.
 
 ### 패키징
@@ -191,17 +195,17 @@ public class MasulsaAgent {
 mvn clean package
 ```
 
-![4]()
+![4](https://raw.githubusercontent.com/smpark1020/tistory/master/Java/javaagent%20%EC%82%AC%EC%9A%A9%ED%95%B4%EB%B3%B4%EA%B8%B0/4.PNG)
 
-![5]()
+![5](https://raw.githubusercontent.com/smpark1020/tistory/master/Java/javaagent%20%EC%82%AC%EC%9A%A9%ED%95%B4%EB%B3%B4%EA%B8%B0/5.PNG)
 * 빌드에 성공하면 jar 파일이 생깁니다.
 
 jar 파일의 확장자를 zip으로 바꾸면 그 안에 있는 MANIFEST.MF 파일을 확인할 수 있습니다.   
-![6]()
+![6](https://raw.githubusercontent.com/smpark1020/tistory/master/Java/javaagent%20%EC%82%AC%EC%9A%A9%ED%95%B4%EB%B3%B4%EA%B8%B0/6.PNG)
 * 우리가 설정했던 값들이 추가된 것을 확인할 수 있습니다.
 
 이제 다시 빌드해서 다시 jar 파일을 생성해줍니다.
-![7]()
+![7](https://raw.githubusercontent.com/smpark1020/tistory/master/Java/javaagent%20%EC%82%AC%EC%9A%A9%ED%95%B4%EB%B3%B4%EA%B8%B0/7.PNG)
 * 표시한 경로를 복사합니다.
 
 ### Javaagent 붙여서 사용하기
@@ -212,7 +216,7 @@ jar 파일의 확장자를 zip으로 바꾸면 그 안에 있는 MANIFEST.MF 파
 * 위에서 복사한 경로를 붙여주면 됩니다.
 * 여러개 추가할 수 있습니다.
 
-![8]()
+![8](https://raw.githubusercontent.com/smpark1020/tistory/master/Java/javaagent%20%EC%82%AC%EC%9A%A9%ED%95%B4%EB%B3%B4%EA%B8%B0/8.PNG)
 
 이제 아래 코드를 실행해봅니다.
 ```
@@ -223,7 +227,7 @@ public class Masulsa {
     }
 }
 ```
-![9]()
+![9](https://raw.githubusercontent.com/smpark1020/tistory/master/Java/javaagent%20%EC%82%AC%EC%9A%A9%ED%95%B4%EB%B3%B4%EA%B8%B0/9.PNG)
 * "Rabbit!"이 출력됩니다.
 
 ```
