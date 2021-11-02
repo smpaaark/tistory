@@ -77,7 +77,7 @@ public class App {
 * Class<?> aClass1 = Class.forName("me.smpaaark.Book");
   * 문자열로 읽어올 수 있습니다.
   * Class.forName("FQCN")
-    * FQCN: 풀 패키지 경로 + 클래스 명
+     * FQCN: 풀 패키지 경로 + 클래스 명
   * 클래스패스에 해당 클래스가 없다면 ClassNotFoundException이 발생합니다.
 
 ## Class<T>를 통해 할 수 있는 것
@@ -96,7 +96,7 @@ public class App {
 }
 ```
 
-![1]()
+![1](https://raw.githubusercontent.com/smpark1020/tistory/master/Java/%EB%A6%AC%ED%94%8C%EB%A0%89%EC%85%98%20API%20-%20%ED%81%B4%EB%9E%98%EC%8A%A4%20%EC%A0%95%EB%B3%B4%20%EC%A1%B0%ED%9A%8C/1.PNG)
 * d 필드만 출력이 됩니다.
 * getFields()는 public한 것만 리턴합니다.
 
@@ -114,7 +114,7 @@ public class App {
 }
 ```
 
-![2]()
+![2](https://raw.githubusercontent.com/smpark1020/tistory/master/Java/%EB%A6%AC%ED%94%8C%EB%A0%89%EC%85%98%20API%20-%20%ED%81%B4%EB%9E%98%EC%8A%A4%20%EC%A0%95%EB%B3%B4%20%EC%A1%B0%ED%9A%8C/2.PNG)
 * 모든 필드가 출력됩니다.
 * 파라미터로 필드명을 전달하면 해당 필드를 리턴합니다.
 
@@ -147,7 +147,7 @@ public class App {
   * 이 때 Book 인스턴스가 필요합니다.
   * 리플렉션으로 인스턴스를 만드는 것도 가능합니다.
 
-![3]()
+![3](https://raw.githubusercontent.com/smpark1020/tistory/master/Java/%EB%A6%AC%ED%94%8C%EB%A0%89%EC%85%98%20API%20-%20%ED%81%B4%EB%9E%98%EC%8A%A4%20%EC%A0%95%EB%B3%B4%20%EC%A1%B0%ED%9A%8C/3.PNG)
 * 필드 정보와 해당 필드의 값이 출력됩니다.
 
 ### 메소드 (목록) 가져오기
@@ -166,7 +166,7 @@ public class App {
 }
 ```
 
-![4]()
+![4](https://raw.githubusercontent.com/smpark1020/tistory/master/Java/%EB%A6%AC%ED%94%8C%EB%A0%89%EC%85%98%20API%20-%20%ED%81%B4%EB%9E%98%EC%8A%A4%20%EC%A0%95%EB%B3%B4%20%EC%A1%B0%ED%9A%8C/4.PNG)
 * 직접 정의한 메서드뿐만 아니라 Object에 정의되어 있는 메서드들도 함께 출력됩니다.
 
 ### 생성자 가져오기
@@ -183,7 +183,7 @@ public class App {
 }
 ```
 
-![5]()
+![5](https://raw.githubusercontent.com/smpark1020/tistory/master/Java/%EB%A6%AC%ED%94%8C%EB%A0%89%EC%85%98%20API%20-%20%ED%81%B4%EB%9E%98%EC%8A%A4%20%EC%A0%95%EB%B3%B4%20%EC%A1%B0%ED%9A%8C/5.PNG)
 
 ### 상위 클래스 가져오기
 **getSuperclass()**
@@ -197,7 +197,7 @@ public class App {
 }
 ```
 
-![6]()
+![6](https://raw.githubusercontent.com/smpark1020/tistory/master/Java/%EB%A6%AC%ED%94%8C%EB%A0%89%EC%85%98%20API%20-%20%ED%81%B4%EB%9E%98%EC%8A%A4%20%EC%A0%95%EB%B3%B4%20%EC%A1%B0%ED%9A%8C/6.PNG)
 
 ### 인터페이스 (목록) 가져오기
 **getInterfaces()**
@@ -213,7 +213,7 @@ public class App {
 }
 ```
 
-![7]()
+![7](https://raw.githubusercontent.com/smpark1020/tistory/master/Java/%EB%A6%AC%ED%94%8C%EB%A0%89%EC%85%98%20API%20-%20%ED%81%B4%EB%9E%98%EC%8A%A4%20%EC%A0%95%EB%B3%B4%20%EC%A1%B0%ED%9A%8C/7.PNG)
 
 ### 접근제어자 확인하기
 ```
@@ -239,7 +239,7 @@ public class App {
 * Modifier.isStatic(modifiers)
   * 해당 접근제어자가 static인지 확인합니다.
 
-![8]()
+![8](https://raw.githubusercontent.com/smpark1020/tistory/master/Java/%EB%A6%AC%ED%94%8C%EB%A0%89%EC%85%98%20API%20-%20%ED%81%B4%EB%9E%98%EC%8A%A4%20%EC%A0%95%EB%B3%B4%20%EC%A1%B0%ED%9A%8C/8.PNG)
 
 이 밖에도 메서드, 애노테이션 관련 정보 등 수많은 정보들을 참조할 수 있습니다.
 
