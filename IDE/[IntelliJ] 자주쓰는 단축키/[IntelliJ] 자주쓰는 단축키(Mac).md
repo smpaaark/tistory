@@ -24,6 +24,20 @@
 * 생성자/Getter/Setter/toString 만들기: Control + Enter
 * 해당 메서드를 사용하는 곳 조회: Option + F7
 
+## 메모 단축키
+* 제목: Command + Shift + T
+* 머리말: Command + Shift + H
+* 본문: Command + Shift + B
+* 글씨 굵게: Command + B
+* 구분점: Command + Shift + 7
+* 체크리스트: Command + Shift + L
+
+## Visual Studio Code
+* 새 파일: Command + N
+* Markdown 미리보기: Command + Shift + V
+* Markdown 측면에 미리보기: Command + K, V
+* 탭 이동: Command + Option + 화살표(좌, 우)
+
 ## 기타 단축키
 * 이모지 입력: Control + Command + Space
 * Alfred: Control + Shift + A
