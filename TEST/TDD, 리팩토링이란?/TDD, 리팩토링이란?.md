@@ -46,7 +46,7 @@ public static void main(String[] args) {
 * 변화에 대한 두려움을 줄여줍니다.
 
 ### TDD 사이클
-![1]()   
+![1](https://raw.githubusercontent.com/smpark1020/tistory/master/TEST/TDD%2C%20%EB%A6%AC%ED%8C%A9%ED%86%A0%EB%A7%81%EC%9D%B4%EB%9E%80%3F/1.png)   
 * 실패하는 테스트를 구현합니다.
 * 테스트가 성공하도록 프로덕션 코드를 구현합니다.
 * 프로덕션 코드와 테스트 코드를 리팩토링합니다.
