@@ -4,7 +4,7 @@ Preferences > Editor > File Encodings
 ![1](https://raw.githubusercontent.com/smpark1020/tistory/master/IDE/%5B%EC%9D%B8%ED%85%94%EB%A6%ACJ%5D%20%EA%B0%9C%EB%B0%9C%20%ED%99%98%EA%B2%BD%20%EC%84%B8%ED%8C%85/1.png)
 
 ## 새줄 문자 LF
-![2](https://raw.githubusercontent.com/smpark1020/tistory/master/IDE/%5B%EC%9D%B8%ED%85%94%EB%A6%ACJ%5D%20%EA%B0%9C%EB%B0%9C%20%ED%99%98%EA%B2%BD%20%EC%84%B8%ED%8C%85/2.png)
+![2](https://raw.githubusercontent.com/smpark1020/tistory/master/IDE/%5B%EC%9D%B8%ED%85%94%EB%A6%ACJ%5D%20%EA%B0%9C%EB%B0%9C%20%ED%99%98%EA%B2%BD%20%EC%84%B8%ED%8C%85/9.png)
 
 ## import 구문
 클래스를 import할때는 와일드카드(*) 없이 모든 클래스 명을 다 씁니다.   
